@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SpielDex — Spielplatzkontrolle rechtssicher dokumentieren</title>
+  <meta name="description" content="Spielplatzkontrolle nach DIN EN 1176 gerichtsfest dokumentieren: Checkliste, GPS-Stempel, Beweisfotos, Mängel-Management und PDF-Kontrollbuch. Für Hausmeisterservices, GaLaBau, Hausverwaltungen und Kommunen in DACH." />
+  <meta name="theme-color" content="#FBF6F3" />
+  <style>
+    :root {
+      --paper: #FBF6F3; --card: #FFFFFF; --ink: #16282B; --muted: #6B8388;
+      --coral: #EA5A47; --coral-deep: #C74433; --coral-soft: #FFE4E0;
+      --petrol: #12393E; --petrol-night: #0B1F22; --petrol-line: #1E4247;
+      --teal: #14B8A6; --teal-soft: #CCFBF1; --sand: #FDE68A;
+      --border: #EBDDD8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--paper); color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden;
+    }
+    .wrap { max-width: 1020px; margin: 0 auto; padding: 0 24px; }
+    a { color: var(--coral-deep); }
+
+    /* Header: heller Sticky-Balken mit dicker Unterlinie */
+    .sitehead { position: sticky; top: 0; z-index: 50; background: rgba(251,246,243,.92);
+      -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+      border-bottom: 3px solid var(--petrol); }
+    header { padding: 14px 0; display: flex; align-items: center; gap: 12px; }
+    .logo { width: 40px; height: 40px; background: var(--coral); border-radius: 14px;
+      display: grid; place-items: center; font-size: 21px;
+      box-shadow: 4px 4px 0 var(--petrol); }
+    .brand { font-size: 20px; font-weight: 800; letter-spacing: -0.3px; }
+    .brand b { color: var(--coral); }
+
+    /* Hero: zweifarbige Headline mit Marker-Effekt + Wippe-Illustration */
+    .hero { padding: 72px 0 24px; display: grid; grid-template-columns: 1.25fr .75fr; gap: 32px; align-items: center; }
+    @media (max-width: 820px) { .hero { grid-template-columns: 1fr; } .hero-art { order: -1; max-width: 320px; margin: 0 auto; } }
+    .kicker { display: inline-block; background: var(--petrol); color: #fff; font-size: 12.5px;
+      font-weight: 800; letter-spacing: .6px; padding: 7px 14px; border-radius: 999px; margin-bottom: 20px; }
+    h1 { font-size: clamp(34px, 5.4vw, 58px); font-weight: 900; letter-spacing: -1.6px; line-height: 1.08; }
+    .marker { position: relative; white-space: nowrap; }
+    .marker::after { content: ''; position: absolute; left: -2%; right: -2%; bottom: 6%; height: 38%;
+      background: var(--sand); z-index: -1; border-radius: 6px; transform: rotate(-1.2deg); }
+    .sub { margin-top: 20px; font-size: 18px; color: var(--muted); max-width: 560px; }
+    .sub strong { color: var(--ink); }
+    .cta-row { margin-top: 30px; display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn { display: inline-block; font-weight: 800; font-size: 16px; padding: 15px 28px;
+      border-radius: 14px; text-decoration: none; color: #fff; background: var(--coral);
+      border: 2px solid var(--petrol); box-shadow: 5px 5px 0 var(--petrol);
+      transition: transform .12s ease, box-shadow .12s ease; }
+    .btn:hover { transform: translate(2px, 2px); box-shadow: 3px 3px 0 var(--petrol); }
+    .btn.ghost { background: var(--card); color: var(--ink); }
+    .ticks { margin-top: 30px; display: flex; gap: 22px; flex-wrap: wrap; }
+    .tick { font-size: 14px; font-weight: 700; color: var(--petrol); }
+    .tick::before { content: '✓ '; color: var(--teal); font-weight: 900; }
+
+    /* Wippe-Illustration (CSS-animiert) */
+    .hero-art { position: relative; }
+    .seesaw-stage { background: var(--petrol-night); border: 2px solid var(--petrol);
+      border-radius: 26px; box-shadow: 8px 8px 0 var(--coral-soft), 8px 8px 0 2px var(--border);
+      padding: 46px 24px 30px; display: grid; place-items: center; }
+    .seesaw { width: 210px; height: 96px; position: relative; }
+    .plank { position: absolute; bottom: 40px; left: 0; width: 210px; height: 10px; border-radius: 6px;
+      background: #ECF6F5; transform-origin: 50% 50%; animation: tilt 3s ease-in-out infinite; }
+    .plank i { position: absolute; bottom: 10px; width: 26px; height: 26px; border-radius: 50%; }
+    .plank i:first-child { left: 2px; background: #FF7A6E; }
+    .plank i:last-child { right: 2px; background: #2DD4BF; }
+    @keyframes tilt { 0%, 100% { transform: rotate(-8deg); } 50% { transform: rotate(8deg); } }
+    @media (prefers-reduced-motion: reduce) { .plank { animation: none; } }
+    .pivot { position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%);
+      width: 0; height: 0; border-left: 19px solid transparent; border-right: 19px solid transparent;
+      border-bottom: 34px solid var(--sand); }
+    .ground { position: absolute; bottom: 4px; left: 12px; right: 12px; height: 4px; border-radius: 2px; background: var(--petrol-line); }
+    .stage-caption { margin-top: 20px; color: #8FB0B4; font-size: 13px; font-weight: 600; text-align: center; letter-spacing: .4px; }
+
+    /* Wellen-Trenner */
+    .wave { display: block; width: 100%; height: 54px; }
+
+    section { padding: 44px 0; }
+    .eyebrow { color: var(--coral); font-size: 13px; font-weight: 900; letter-spacing: 1.4px; text-transform: uppercase; margin-bottom: 8px; }
+    h2 { font-size: clamp(24px, 3.6vw, 32px); font-weight: 900; letter-spacing: -0.7px; margin-bottom: 8px; }
+    .lead { color: var(--muted); font-size: 16px; max-width: 640px; margin-bottom: 26px; }
+
+    /* Sticker-Karten */
+    .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .sticker { background: var(--card); border: 2px solid var(--petrol); border-radius: 20px;
+      padding: 24px 22px; box-shadow: 6px 6px 0 var(--border);
+      transition: transform .15s ease, box-shadow .15s ease; }
+    .sticker:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--coral-soft); }
+    .sticker .chip { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center;
+      font-size: 23px; margin-bottom: 14px; background: var(--coral-soft); border: 2px solid var(--coral); }
+    .sticker:nth-child(3n+2) .chip { background: var(--teal-soft); border-color: var(--teal); }
+    .sticker:nth-child(3n) .chip { background: var(--sand); border-color: #D9A50A; }
+    .sticker h3 { font-size: 17px; font-weight: 800; margin-bottom: 6px; }
+    .sticker p { font-size: 14.5px; color: var(--muted); }
+
+    /* Ablauf: nummerierte Spur */
+    .track { position: relative; max-width: 720px; }
+    .track::before { content: ''; position: absolute; left: 23px; top: 10px; bottom: 10px;
+      border-left: 3px dashed var(--coral); opacity: .5; }
+    .hop { position: relative; padding: 0 0 26px 68px; }
+    .hop .n { position: absolute; left: 0; top: 0; width: 48px; height: 48px; border-radius: 50%;
+      background: var(--coral); color: #fff; font-weight: 900; font-size: 19px;
+      display: grid; place-items: center; border: 2px solid var(--petrol); box-shadow: 3px 3px 0 var(--petrol); }
+    .hop strong { font-size: 16.5px; }
+    .hop p { color: var(--muted); font-size: 14.5px; margin-top: 2px; }
+
+    /* Preise */
+    .price-grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); max-width: 720px; }
+    .price { background: var(--card); border: 2px solid var(--petrol); border-radius: 20px; padding: 26px 24px; box-shadow: 6px 6px 0 var(--border); }
+    .price.pro { background: var(--petrol); color: #fff; box-shadow: 6px 6px 0 var(--coral); }
+    .price h3 { font-size: 18px; font-weight: 800; }
+    .price .amount { font-size: 38px; font-weight: 900; letter-spacing: -1px; margin: 10px 0 2px; }
+    .price.pro .amount { color: var(--sand); }
+    .price .per { font-size: 13px; color: var(--muted); }
+    .price.pro .per { color: #A9C7CB; }
+    .price ul { list-style: none; margin-top: 16px; }
+    .price li { font-size: 14.5px; padding: 4px 0; color: var(--muted); }
+    .price.pro li { color: #DCEDEF; }
+    .price li::before { content: '✓ '; color: var(--teal); font-weight: 900; }
+    .tag { display: inline-block; font-size: 11px; font-weight: 800; color: var(--petrol);
+      background: var(--sand); padding: 4px 10px; border-radius: 999px; margin-left: 8px; vertical-align: middle; }
+
+    /* Suite-Block: dunkler Kontrastblock */
+    .suite { margin-top: 30px; background: var(--petrol-night); color: #ECF6F5;
+      border-radius: 26px; padding: 38px 32px; border: 2px solid var(--petrol);
+      box-shadow: 8px 8px 0 var(--coral-soft); }
+    .suite-pill { display: inline-block; font-size: 12px; font-weight: 900; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--petrol-night); background: #2DD4BF; padding: 6px 14px; border-radius: 999px; }
+    .suite h3 { font-size: 27px; font-weight: 900; letter-spacing: -.6px; margin-top: 16px; }
+    .suite .sl { color: #8FB0B4; font-size: 15px; margin-top: 10px; max-width: 640px; }
+    .suite .sl b { color: #ECF6F5; }
+    .suite-prices { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 26px; }
+    @media (max-width: 700px) { .suite-prices { grid-template-columns: 1fr; } }
+    .sp { background: #122C30; border: 1px solid var(--petrol-line); border-radius: 18px; padding: 22px; position: relative; }
+    .sp.best { border: 2px solid #2DD4BF; }
+    .sp-badge { position: absolute; top: -13px; right: 16px; font-size: 11.5px; font-weight: 900;
+      color: var(--petrol-night); background: var(--sand); padding: 4px 11px; border-radius: 999px; }
+    .sp-name { font-size: 13px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: #8FB0B4; }
+    .sp.best .sp-name { color: #2DD4BF; }
+    .sp-strike { color: #6B8388; font-size: 14px; text-decoration: line-through; margin-top: 10px; }
+    .sp-amount { font-size: 32px; font-weight: 900; letter-spacing: -.8px; }
+    .sp-amount small { font-size: 14px; font-weight: 600; color: #8FB0B4; }
+    .sp-note { color: #8FB0B4; font-size: 13px; margin-top: 4px; }
+    .suite-icons { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 26px; }
+    .suite-icons img { width: 44px; height: 44px; border-radius: 12px; border: 1px solid var(--petrol-line); }
+    .suite-list { list-style: none; margin-top: 18px; }
+    .suite-list li { font-size: 14.5px; padding: 5px 0 5px 24px; position: relative; }
+    .suite-list li::before { content: '●'; color: var(--coral); position: absolute; left: 0; }
+    .suite-how { color: #8FB0B4; font-size: 13.5px; margin: 18px 0 20px; }
+    .suite .btn { background: #2DD4BF; color: var(--petrol-night); border-color: #2DD4BF; box-shadow: 5px 5px 0 rgba(45,212,191,.25); }
+
+    /* Cross-Promo */
+    .promo-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); }
+    .promo { display: flex; gap: 14px; align-items: center; background: var(--card);
+      border: 2px solid var(--border); border-radius: 18px; padding: 16px;
+      text-decoration: none; color: var(--ink); transition: border-color .15s ease, transform .15s ease; }
+    .promo:hover { border-color: var(--coral); transform: translateY(-3px); }
+    .promo img { flex: 0 0 48px; width: 48px; height: 48px; border-radius: 12px; }
+    .promo b { display: block; font-size: 15.5px; }
+    .promo span { font-size: 13px; color: var(--muted); }
+
+    /* Scroll-Reveal */
+    .reveal.pre { opacity: 0; transform: translateY(18px); }
+    .reveal.in { opacity: 1; transform: none; transition: opacity .6s ease, transform .6s cubic-bezier(.22,.61,.36,1); }
+    .grid .reveal.in:nth-child(2), .promo-grid .reveal.in:nth-child(2) { transition-delay: .07s; }
+    .grid .reveal.in:nth-child(3), .promo-grid .reveal.in:nth-child(3) { transition-delay: .14s; }
+    .grid .reveal.in:nth-child(4), .promo-grid .reveal.in:nth-child(4) { transition-delay: .21s; }
+    .grid .reveal.in:nth-child(5), .promo-grid .reveal.in:nth-child(5) { transition-delay: .28s; }
+    .grid .reveal.in:nth-child(6), .promo-grid .reveal.in:nth-child(6) { transition-delay: .35s; }
+    @media (prefers-reduced-motion: no-preference) {
+      .hero > div > * { opacity: 0; transform: translateY(16px); animation: rise .7s cubic-bezier(.22,.61,.36,1) forwards; }
+      .hero > div > *:nth-child(2) { animation-delay: .08s; }
+      .hero > div > *:nth-child(3) { animation-delay: .16s; }
+      .hero > div > *:nth-child(4) { animation-delay: .24s; }
+      .hero > div > *:nth-child(5) { animation-delay: .32s; }
+      @keyframes rise { to { opacity: 1; transform: none; } }
+    }
+
+    /* Footer: Petrol-Block */
+    .foot { background: var(--petrol-night); color: #8FB0B4; margin-top: 40px; }
+    .foot-inner { display: flex; flex-wrap: wrap; gap: 18px; justify-content: space-between;
+      padding: 30px 0 46px; font-size: 14px; }
+    .foot a { color: #DCEDEF; }
+    .foot nav { display: flex; gap: 16px; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+  <div class="sitehead">
+    <div class="wrap">
+      <header>
+        <span class="logo">🛝</span>
+        <span class="brand">Spiel<b>Dex</b></span>
+      </header>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <span class="kicker">DIN EN 1176 · Hausmeister · GaLaBau · Verwaltungen · Kommunen · 🇩🇪 🇦🇹 🇨🇭</span>
+        <h1>Wenn auf dem Spielplatz was passiert, zählt <span class="marker">deine Kontrolle.</span></h1>
+        <p class="sub">
+          Ein Kind verletzt sich am Klettergerüst — und plötzlich zählt nur noch deine Dokumentation.
+          SpielDex macht aus jeder Spielplatzkontrolle nach <strong>DIN EN 1176</strong> eine gerichtsfeste
+          Beweiskette: Checkliste, GPS-Stempel, Beweisfotos, Mängel und PDF-Kontrollbuch — in 60 Sekunden.
+        </p>
+        <div class="cta-row">
+          <a class="btn" href="#" id="store-link">Bald im Google Play Store</a>
+          <a class="btn ghost" href="#funktionen">Mehr erfahren</a>
+        </div>
+        <div class="ticks">
+          <span class="tick">Checkliste DIN EN 1176-7</span>
+          <span class="tick">Einträge unveränderlich</span>
+          <span class="tick">GPS + Foto automatisch</span>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="seesaw-stage">
+          <div class="seesaw">
+            <div class="plank"><i></i><i></i></div>
+            <div class="pivot"></div>
+            <div class="ground"></div>
+          </div>
+          <div class="stage-caption">Alles im Gleichgewicht — alles dokumentiert.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <svg class="wave" viewBox="0 0 1440 54" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,30 C240,54 480,6 720,24 C960,42 1200,10 1440,30 L1440,54 L0,54 Z" fill="#FFE4E0"/>
+  </svg>
+
+  <div style="background:#FFE4E0">
+    <div class="wrap">
+      <section id="funktionen">
+        <div class="eyebrow">Funktionen</div>
+        <h2>Deine Beweiskette</h2>
+        <div class="grid">
+          <div class="sticker reveal"><span class="chip">✅</span><h3>Checkliste nach DIN EN 1176-7</h3>
+            <p>Visuelle Routinekontrolle, operative Kontrolle und Jahreshauptinspektion — mit vordefinierten Prüfpunkten von Fallschutz bis scharfe Kanten.</p></div>
+          <div class="sticker reveal"><span class="chip">📍</span><h3>GPS- &amp; Zeitstempel</h3>
+            <p>Jede Kontrolle wird automatisch mit Position und Uhrzeit versehen — du warst nachweislich vor Ort.</p></div>
+          <div class="sticker reveal"><span class="chip">⚠️</span><h3>Mängel-Management</h3>
+            <p>Mangel mit Schweregrad erfassen (bis „Gefahr – Gerät gesperrt"), Foto dazu — und die Behebung lückenlos mit Vermerk dokumentieren.</p></div>
+          <div class="sticker reveal"><span class="chip">🔒</span><h3>Unveränderlich (append-only)</h3>
+            <p>Kontrollen können nie bearbeitet oder gelöscht werden — nur gekennzeichnete Stornos mit Begründung. Genau das überzeugt vor Gericht.</p></div>
+          <div class="sticker reveal"><span class="chip">🛝</span><h3>Geräte-Inventar</h3>
+            <p>Jedes Spielgerät mit Kategorie, Hersteller und Baujahr — Mängel werden direkt dem richtigen Gerät zugeordnet.</p></div>
+          <div class="sticker reveal"><span class="chip">📄</span><h3>PDF-Kontrollbuch</h3>
+            <p>Ein Tipp erzeugt das komplette Kontrollbuch pro Spielplatz und Zeitraum — inklusive Mängel-Liste, Foto-Anhang und Rechtsgrundlage deines Landes.</p></div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <svg class="wave" viewBox="0 0 1440 54" preserveAspectRatio="none" aria-hidden="true" style="transform:rotate(180deg)">
+    <path d="M0,30 C240,54 480,6 720,24 C960,42 1200,10 1440,30 L1440,54 L0,54 Z" fill="#FFE4E0"/>
+  </svg>
+
+  <div class="wrap">
+    <section>
+      <div class="eyebrow">Ablauf</div>
+      <h2>So funktioniert's</h2>
+      <div class="track">
+        <div class="hop reveal"><div class="n">1</div><strong>Spielplatz anlegen.</strong>
+          <p>Name, Adresse, Betreiber — und die Spielgeräte als Inventar erfassen (Schaukel, Rutsche, Klettergerüst …).</p></div>
+        <div class="hop reveal"><div class="n">2</div><strong>Kontrolle dokumentieren.</strong>
+          <p>Vor Ort die Checkliste durchgehen, Mängel mit Foto erfassen — GPS und Zeitstempel ergänzt SpielDex automatisch. Auch „alles in Ordnung" ist ein Nachweis.</p></div>
+        <div class="hop reveal"><div class="n">3</div><strong>Kontrollbuch teilen.</strong>
+          <p>PDF pro Zeitraum an die Kommune, Hausverwaltung oder den Auftraggeber — oder im Streitfall an den Anwalt.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Preise</div>
+      <h2>Preise</h2>
+      <div class="price-grid">
+        <div class="price reveal">
+          <h3>Free</h3>
+          <div class="amount">0&nbsp;€</div>
+          <div class="per">für immer</div>
+          <ul>
+            <li>2 Spielplätze in vollem Umfang</li>
+            <li>DIN-Checkliste, GPS, Fotos, Mängel</li>
+            <li>PDF-Kontrollbuch mit Wasserzeichen</li>
+            <li>Cloud-Sync auf allen Geräten</li>
+          </ul>
+        </div>
+        <div class="price pro reveal">
+          <h3>Pro <span class="tag">Empfohlen</span></h3>
+          <div class="amount">9,99&nbsp;€</div>
+          <div class="per">pro Monat · jederzeit kündbar</div>
+          <ul>
+            <li>Unbegrenzt Spielplätze</li>
+            <li>Team: Mitarbeiter einladen</li>
+            <li>PDF-Kontrollbuch ohne Wasserzeichen</li>
+            <li>Wöchentliche Kontroll-Erinnerung</li>
+            <li>Priorisierter Support</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Dexware Suite Bundle -->
+      <div class="suite" id="suite">
+        <span class="suite-pill">Dexware Suite — ein Abo, alle Apps</span>
+        <h3>Alle 9 Dexware-Apps. Ein Abo.</h3>
+        <p class="sl">
+          Die Suite kostet so viel wie unsere teuerste Einzel-App — und schaltet <b>alle</b> Dexware-Apps
+          auf allen deinen Geräten frei. Neue Apps kommen automatisch dazu, ohne Aufpreis.
+        </p>
+        <div class="suite-prices">
+          <div class="sp">
+            <div class="sp-name">Monatlich</div>
+            <div class="sp-strike">über 90 € — alle Apps einzeln</div>
+            <div class="sp-amount">29,99 € <small>/ Monat</small></div>
+            <div class="sp-note">Der Preis unserer teuersten Einzel-App — über 65 % günstiger als alles einzeln.</div>
+          </div>
+          <div class="sp best">
+            <span class="sp-badge">4 Monate geschenkt · −33 %</span>
+            <div class="sp-name">Jährlich</div>
+            <div class="sp-strike">statt 359,88 € (12 × 29,99 €)</div>
+            <div class="sp-amount">239,99 € <small>/ Jahr</small></div>
+            <div class="sp-note">Entspricht 20,00 € im Monat — du zahlst nur 8 von 12 Monaten.</div>
+          </div>
+        </div>
+        <div class="suite-icons">
+          <img src="spieldex-icon.png" alt="SpielDex" title="SpielDex" />
+          <img src="winterdex-icon.png" alt="WinterDex" title="WinterDex" />
+          <img src="kfzdex-icon.png" alt="KfzDex" title="KfzDex" />
+          <img src="pruefdex-icon.png" alt="PrüfDex" title="PrüfDex" />
+          <img src="schutzheld-icon.png" alt="SchutzDex" title="SchutzDex" />
+          <img src="baumdex-icon.png" alt="BaumDex" title="BaumDex" />
+          <img src="routelog-icon.png" alt="TourDex" title="TourDex" />
+          <img src="craftlog-icon.png" alt="CraftDex" title="CraftDex" />
+          <img src="archio-icon.png" alt="DokuDex" title="DokuDex" />
+        </div>
+        <ul class="suite-list">
+          <li>Alle 9 Apps inklusive — von Spielplatzkontrolle bis UVV</li>
+          <li>Alle zukünftigen Dexware-Apps automatisch dabei</li>
+          <li>Einmal kaufen — in jeder App freigeschaltet</li>
+          <li>Jederzeit kündbar</li>
+        </ul>
+        <p class="suite-how">Erhältlich direkt in jeder Dexware-App: einfach in der App auf „Pro werden" tippen und die Dexware Suite wählen.</p>
+        <a href="https://dexware.app/" target="_blank" rel="noopener" class="btn">Mehr zur Dexware Suite →</a>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Die Dexware-Familie</div>
+      <h2>Entdecke die ganze Dexware</h2>
+      <p class="lead">SpielDex ist Teil der Dexware-Familie — Pflicht-Dokumentation, die einfach funktioniert.</p>
+      <div class="promo-grid">
+        <a class="promo reveal" href="https://winterdex.dexware.app" target="_blank" rel="noopener">
+          <img src="winterdex-icon.png" alt="WinterDex" width="48" height="48" />
+          <span><b>WinterDex</b><span>Winterdienst gerichtsfest — Räum- &amp; Streupflicht mit GPS &amp; Wetter.</span></span></a>
+        <a class="promo reveal" href="https://baumdex-portal.vercel.app/" target="_blank" rel="noopener">
+          <img src="baumdex-icon.png" alt="BaumDex" width="48" height="48" />
+          <span><b>BaumDex</b><span>Baumkataster &amp; Verkehrssicherung für GaLaBau und Baumpflege.</span></span></a>
+        <a class="promo reveal" href="https://kfzdex.dexware.app" target="_blank" rel="noopener">
+          <img src="kfzdex-icon.png" alt="KfzDex" width="48" height="48" />
+          <span><b>KfzDex</b><span>Fuhrpark-Verwaltung — UVV-Prüfung, Führerscheinkontrolle &amp; Fristen.</span></span></a>
+        <a class="promo reveal" href="https://schutzdex.dexware.app" target="_blank" rel="noopener">
+          <img src="schutzheld-icon.png" alt="SchutzDex" width="48" height="48" />
+          <span><b>SchutzDex</b><span>KI-Unterweisung &amp; Gefährdungsbeurteilung — prüffest dokumentiert.</span></span></a>
+        <a class="promo reveal" href="https://pruefdex.dexware.app" target="_blank" rel="noopener">
+          <img src="pruefdex-icon.png" alt="PrüfDex" width="48" height="48" />
+          <span><b>PrüfDex</b><span>DGUV-V3-Prüfung: Geräte, Protokolle, Plaketten &amp; Fristen.</span></span></a>
+        <a class="promo reveal" href="https://craftdex.dexware.app" target="_blank" rel="noopener">
+          <img src="craftlog-icon.png" alt="CraftDex" width="48" height="48" />
+          <span><b>CraftDex</b><span>Aufträge, Zeiten &amp; Material — die App für Handwerksbetriebe.</span></span></a>
+        <a class="promo reveal" href="https://tourdex.dexware.app" target="_blank" rel="noopener">
+          <img src="routelog-icon.png" alt="TourDex" width="48" height="48" />
+          <span><b>TourDex</b><span>Automatisches Fahrtenbuch — KI trennt geschäftlich &amp; privat.</span></span></a>
+        <a class="promo reveal" href="https://dokudex.dexware.app" target="_blank" rel="noopener">
+          <img src="archio-icon.png" alt="DokuDex" width="48" height="48" />
+          <span><b>DokuDex</b><span>Dokumente scannen &amp; per KI verstehen — mit Fristen-Erinnerung.</span></span></a>
+      </div>
+      <p style="text-align:center;margin-top:20px">
+        <a href="https://dexware.app/" target="_blank" rel="noopener">Alle Dexware-Apps auf einen Blick →</a>
+      </p>
+    </section>
+  </div>
+
+  <div class="foot">
+    <div class="wrap">
+      <div class="foot-inner">
+        <span>© 2026 SpielDex · Alexander Pfalz</span>
+        <nav>
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+          <a href="konto-loeschung.html">Konto löschen</a>
+          <a href="mailto:2easy4trash@gmail.com?subject=SpielDex%20Support">Support</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!reduced && 'IntersectionObserver' in window) {
+        var els = document.querySelectorAll('.reveal');
+        for (var j = 0; j < els.length; j++) els[j].classList.add('pre');
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+          });
+        }, { threshold: 0.12 });
+        for (var k = 0; k < els.length; k++) io.observe(els[k]);
+      }
+    })();
+  </script>
+</body>
+</html>
