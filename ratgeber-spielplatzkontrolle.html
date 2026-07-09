@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spielplatzkontrolle nach DIN EN 1176: Pflicht, Fristen & die drei Inspektionsarten | SpielDex</title>
+  <meta name="description" content="Wie oft muss ein Spielplatz kontrolliert werden? Ratgeber zur Spielplatzkontrolle nach DIN EN 1176: visuelle Routine-, operative und jährliche Hauptinspektion, Verkehrssicherungspflicht (§ 823 BGB), typische Mängel und rechtssichere Dokumentation." />
+  <meta name="robots" content="all" />
+  <meta name="theme-color" content="#FBF6F3" />
+  <link rel="canonical" href="https://spieldex.dexware.app/ratgeber-spielplatzkontrolle.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Spielplatzkontrolle nach DIN EN 1176: Pflicht, Fristen & die drei Inspektionsarten" />
+  <meta property="og:description" content="Wer ist verantwortlich, wie oft muss geprüft werden und was macht die Dokumentation gerichtsfest? Der Praxis-Ratgeber zur Spielplatzkontrolle." />
+  <meta property="og:url" content="https://spieldex.dexware.app/ratgeber-spielplatzkontrolle.html" />
+  <style>
+    :root {
+      --paper: #FBF6F3; --card: #FFFFFF; --ink: #16282B; --muted: #6B8388;
+      --coral: #EA5A47; --coral-deep: #C74433; --coral-soft: #FFE4E0;
+      --petrol: #12393E; --petrol-night: #0B1F22; --petrol-line: #1E4247;
+      --teal: #14B8A6; --teal-soft: #CCFBF1; --sand: #FDE68A;
+      --border: #EBDDD8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--paper); color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden;
+    }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 0 24px; }
+    a { color: var(--coral-deep); }
+
+    /* Header wie index.html */
+    .sitehead { position: sticky; top: 0; z-index: 50; background: rgba(251,246,243,.92);
+      -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+      border-bottom: 3px solid var(--petrol); }
+    .sitehead .wrap { max-width: 1020px; }
+    header { padding: 14px 0; display: flex; align-items: center; gap: 12px; }
+    .logo { width: 40px; height: 40px; background: var(--coral); border-radius: 14px;
+      display: grid; place-items: center; font-size: 21px; text-decoration: none;
+      box-shadow: 4px 4px 0 var(--petrol); }
+    .brand { font-size: 20px; font-weight: 800; letter-spacing: -0.3px; color: var(--ink); text-decoration: none; }
+    .brand b { color: var(--coral); }
+    .head-nav { margin-left: auto; display: flex; gap: 18px; font-size: 14.5px; font-weight: 700; }
+    .head-nav a { color: var(--petrol); text-decoration: none; }
+    .head-nav a:hover { color: var(--coral); }
+    @media (max-width: 560px) { .head-nav { display: none; } }
+
+    /* Artikel-Hero */
+    .art-hero { padding: 48px 0 8px; }
+    .crumbs { font-size: 13px; color: var(--muted); font-weight: 600; margin-bottom: 18px; }
+    .crumbs a { color: var(--muted); text-decoration: none; }
+    .crumbs a:hover { color: var(--coral); }
+    .kicker { display: inline-block; background: var(--petrol); color: #fff; font-size: 12.5px;
+      font-weight: 800; letter-spacing: .6px; padding: 7px 14px; border-radius: 999px; margin-bottom: 20px; }
+    h1 { font-size: clamp(30px, 4.6vw, 46px); font-weight: 900; letter-spacing: -1.2px; line-height: 1.12; }
+    .marker { position: relative; white-space: nowrap; }
+    .marker::after { content: ''; position: absolute; left: -2%; right: -2%; bottom: 6%; height: 34%;
+      background: var(--sand); z-index: -1; border-radius: 6px; transform: rotate(-1.2deg); }
+    .standfirst { margin-top: 22px; font-size: 18px; color: var(--muted); }
+    .standfirst strong { color: var(--ink); }
+    .meta-row { margin-top: 20px; font-size: 13px; color: var(--muted); font-weight: 600;
+      border-top: 2px solid var(--border); border-bottom: 2px solid var(--border); padding: 12px 0; }
+
+    /* Wellen-Trenner */
+    .wave { display: block; width: 100%; height: 46px; }
+
+    /* Artikel-Körper */
+    article { padding: 30px 0 10px; }
+    article h2 { font-size: clamp(23px, 3.4vw, 30px); font-weight: 900; letter-spacing: -0.6px; margin: 44px 0 6px; }
+    article h2 .eyebrow { display: block; color: var(--coral); font-size: 12.5px; font-weight: 900;
+      letter-spacing: 1.4px; text-transform: uppercase; margin-bottom: 6px; }
+    article h3 { font-size: 18px; font-weight: 800; margin: 26px 0 6px; }
+    article p { font-size: 16.5px; margin: 12px 0; }
+    article ul, article ol { margin: 12px 0 12px 4px; padding-left: 22px; }
+    article li { font-size: 16.5px; margin: 7px 0; }
+    article strong { color: var(--ink); }
+
+    /* Inhaltsverzeichnis-Box */
+    .toc { background: var(--card); border: 2px solid var(--petrol); border-radius: 20px;
+      padding: 22px 24px; box-shadow: 6px 6px 0 var(--border); margin: 26px 0 8px; }
+    .toc b { display: block; font-size: 13px; font-weight: 900; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--coral); margin-bottom: 10px; }
+    .toc ol { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 26px; }
+    @media (max-width: 560px) { .toc ol { columns: 1; } }
+    .toc li { font-size: 14.5px; margin: 5px 0; break-inside: avoid; }
+    .toc a { color: var(--ink); text-decoration: none; font-weight: 600; }
+    .toc a:hover { color: var(--coral); }
+
+    /* Sticker-Karten für die 3 Inspektionsarten */
+    .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); margin: 22px 0 8px; }
+    .sticker { background: var(--card); border: 2px solid var(--petrol); border-radius: 20px;
+      padding: 22px 20px; box-shadow: 6px 6px 0 var(--border); }
+    .sticker .chip { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center;
+      font-size: 22px; margin-bottom: 12px; background: var(--coral-soft); border: 2px solid var(--coral); }
+    .sticker:nth-child(2) .chip { background: var(--teal-soft); border-color: var(--teal); }
+    .sticker:nth-child(3) .chip { background: var(--sand); border-color: #D9A50A; }
+    .sticker h3 { font-size: 16.5px; font-weight: 800; margin: 0 0 4px; }
+    .sticker .freq { font-size: 12.5px; font-weight: 800; letter-spacing: .4px; color: var(--petrol); text-transform: uppercase; }
+    .sticker p { font-size: 14.5px; color: var(--muted); margin: 8px 0 0; }
+
+    /* Hinweis-Box */
+    .callout { background: var(--coral-soft); border: 2px solid var(--coral); border-radius: 18px;
+      padding: 20px 22px; margin: 24px 0; }
+    .callout b { color: var(--coral-deep); }
+    .callout p { margin: 6px 0 0; font-size: 15.5px; }
+
+    /* Schweregrad-Tabelle */
+    .sev { border-collapse: collapse; width: 100%; margin: 18px 0; font-size: 15px; }
+    .sev th, .sev td { text-align: left; padding: 11px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .sev th { font-size: 12.5px; letter-spacing: .6px; text-transform: uppercase; color: var(--petrol); }
+    .sev tr td:first-child { font-weight: 800; white-space: nowrap; }
+    .sev-wrap { overflow-x: auto; border: 2px solid var(--petrol); border-radius: 18px; box-shadow: 6px 6px 0 var(--border); margin: 22px 0; }
+    .dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 7px; vertical-align: baseline; }
+
+    /* CTA-Block */
+    .cta { background: var(--petrol-night); color: #ECF6F5; border-radius: 26px;
+      padding: 34px 30px; border: 2px solid var(--petrol); box-shadow: 8px 8px 0 var(--coral-soft); margin: 40px 0 10px; }
+    .cta .suite-pill { display: inline-block; font-size: 12px; font-weight: 900; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--petrol-night); background: #2DD4BF; padding: 6px 14px; border-radius: 999px; }
+    .cta h2 { color: #fff; margin: 14px 0 0; }
+    .cta p { color: #8FB0B4; font-size: 15.5px; margin: 12px 0 0; }
+    .cta p b { color: #ECF6F5; }
+    .btn { display: inline-block; font-weight: 800; font-size: 16px; padding: 14px 26px;
+      border-radius: 14px; text-decoration: none; color: #fff; background: var(--coral);
+      border: 2px solid var(--petrol); box-shadow: 5px 5px 0 var(--petrol);
+      transition: transform .12s ease, box-shadow .12s ease; margin-top: 20px; }
+    .btn:hover { transform: translate(2px, 2px); box-shadow: 3px 3px 0 var(--petrol); }
+    .cta .btn { background: #2DD4BF; color: var(--petrol-night); border-color: #2DD4BF; box-shadow: 5px 5px 0 rgba(45,212,191,.25); }
+
+    /* FAQ */
+    .faq { margin: 20px 0 8px; }
+    .faq details { background: var(--card); border: 2px solid var(--border); border-radius: 16px;
+      padding: 4px 20px; margin-bottom: 12px; transition: border-color .15s ease; }
+    .faq details[open] { border-color: var(--coral); }
+    .faq summary { font-size: 16.5px; font-weight: 800; padding: 14px 0; cursor: pointer; list-style: none; position: relative; padding-right: 30px; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; position: absolute; right: 2px; top: 12px; font-size: 24px; font-weight: 700; color: var(--coral); }
+    .faq details[open] summary::after { content: '–'; }
+    .faq details p { font-size: 15.5px; color: var(--muted); margin: 0 0 16px; }
+
+    .disclaimer { font-size: 13px; color: var(--muted); margin: 30px 0 10px; padding-top: 18px; border-top: 2px solid var(--border); }
+
+    /* Footer wie index.html */
+    .foot { background: var(--petrol-night); color: #8FB0B4; margin-top: 40px; }
+    .foot .wrap { max-width: 1020px; }
+    .foot-inner { display: flex; flex-wrap: wrap; gap: 18px; justify-content: space-between;
+      padding: 30px 0 46px; font-size: 14px; }
+    .foot a { color: #DCEDEF; }
+    .foot nav { display: flex; gap: 16px; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+  <div class="sitehead">
+    <div class="wrap">
+      <header>
+        <a class="logo" href="index.html" aria-label="Zur SpielDex-Startseite">🛝</a>
+        <a class="brand" href="index.html">Spiel<b>Dex</b></a>
+        <nav class="head-nav">
+          <a href="index.html#funktionen">Funktionen</a>
+          <a href="index.html#preise">Preise</a>
+          <a href="ratgeber-spielplatzkontrolle.html">Ratgeber</a>
+        </nav>
+      </header>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="art-hero">
+      <div class="crumbs"><a href="index.html">Start</a> › Ratgeber › Spielplatzkontrolle</div>
+      <span class="kicker">Ratgeber · DIN EN 1176 · Verkehrssicherungspflicht</span>
+      <h1>Wie oft muss ein Spielplatz <span class="marker">kontrolliert werden</span> — und wer haftet?</h1>
+      <p class="standfirst">
+        Jeder öffentlich zugängliche Spielplatz muss regelmäßig geprüft werden. Die
+        <strong>DIN EN 1176</strong> beschreibt drei Inspektionsarten, das Bürgerliche Gesetzbuch die Haftung dahinter.
+        Dieser Ratgeber erklärt, <strong>wer verantwortlich ist</strong>, <strong>wie oft geprüft wird</strong> und
+        warum am Ende die Dokumentation entscheidet.
+      </p>
+      <div class="meta-row">Lesezeit ca. 8 Minuten · Grundlagen für Betreiber, Hausmeister­services, GaLaBau, Kommunen &amp; Wohnungswirtschaft</div>
+    </div>
+  </div>
+
+  <svg class="wave" viewBox="0 0 1440 54" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,30 C240,54 480,6 720,24 C960,42 1200,10 1440,30 L1440,54 L0,54 Z" fill="#FFE4E0"/>
+  </svg>
+
+  <div style="background:#FFE4E0">
+    <div class="wrap">
+      <article>
+        <nav class="toc" aria-label="Inhaltsverzeichnis">
+          <b>Inhalt</b>
+          <ol>
+            <li><a href="#pflicht">Ist die Kontrolle Pflicht?</a></li>
+            <li><a href="#verantwortlich">Wer ist verantwortlich?</a></li>
+            <li><a href="#arten">Die drei Kontrollarten</a></li>
+            <li><a href="#maengel">Typische Mängel</a></li>
+            <li><a href="#management">Mängel-Management &amp; Sperrung</a></li>
+            <li><a href="#doku">Dokumentation als Haftungsschutz</a></li>
+            <li><a href="#faq">Häufige Fragen (FAQ)</a></li>
+          </ol>
+        </nav>
+
+        <h2 id="pflicht"><span class="eyebrow">Grundlage</span>Ist die Spielplatzkontrolle Pflicht?</h2>
+        <p>
+          Ja. Wer einen Spielplatz öffentlich zugänglich macht, übernimmt damit eine
+          <strong>Verkehrssicherungspflicht</strong>: Er muss dafür sorgen, dass von der Anlage keine vermeidbare
+          Gefahr für die Nutzer ausgeht. Rechtlich stützt sich das in Deutschland auf § 823 Abs. 1 BGB —
+          wer eine Gefahrenquelle schafft oder unterhält, haftet für Schäden, die aus einer schuldhaften
+          Verletzung dieser Pflicht entstehen. Kommt ein Kind zu Schaden, weil ein Gerät nicht ordnungsgemäß
+          geprüft und instand gehalten wurde, kann der Betreiber zivilrechtlich und unter Umständen auch
+          strafrechtlich (fahrlässige Körperverletzung) belangt werden.
+        </p>
+        <p>
+          Das technische „Wie" der Prüfung ist nicht im Gesetz geregelt, sondern in der Normenreihe
+          <strong>DIN EN 1176</strong> („Spielplatzgeräte und Spielplatzböden"). Für Betrieb, Inspektion und
+          Wartung ist dabei vor allem <strong>DIN EN 1176-7</strong> maßgeblich. Die Norm ist keine Rechtsvorschrift,
+          gilt aber als anerkannte Regel der Technik: Wer sich an ihr orientiert, erfüllt die Sorgfaltspflicht
+          im Regelfall — wer davon abweicht, muss im Streitfall begründen, warum sein Vorgehen mindestens
+          gleichwertig sicher war.
+        </p>
+
+        <h2 id="verantwortlich"><span class="eyebrow">Zuständigkeit</span>Wer ist verantwortlich?</h2>
+        <p>
+          Verantwortlich ist immer der <strong>Betreiber</strong> der Anlage — also derjenige, der sie eröffnet und
+          unterhält. Das ist je nach Standort ein anderer Akteur:
+        </p>
+        <ul>
+          <li><strong>Kommunen &amp; Städte</strong> für öffentliche Spielplätze in Parks, Grünanlagen und an Straßen.</li>
+          <li><strong>Wohnungswirtschaft</strong> — Wohnungsgenossenschaften, Hausverwaltungen und Vermieter für Spielflächen auf dem Wohngelände.</li>
+          <li><strong>Kindergärten &amp; Schulen</strong> für ihre Außenanlagen; der Träger (Gemeinde, Verein, Kirche) trägt die Pflicht.</li>
+          <li><strong>Vereine, Hotels, Gastronomie, Campingplätze</strong> für Spielbereiche auf ihrem Gelände.</li>
+        </ul>
+        <p>
+          Die Kontrolle selbst darf <strong>delegiert</strong> werden — etwa an einen Hausmeisterservice, einen
+          GaLaBau-Betrieb oder einen externen Sachkundigen. Wichtig: Die <strong>Auswahl-, Instruktions- und
+          Überwachungsverantwortung</strong> bleibt beim Betreiber. Er muss einen geeigneten Dienstleister auswählen,
+          klar beauftragen und sich die Durchführung nachweisen lassen. Ohne belastbare Dokumentation dieser
+          Kette steht der Betreiber im Schadensfall trotz Beauftragung in der Haftung.
+        </p>
+
+        <h2 id="arten"><span class="eyebrow">DIN EN 1176-7</span>Die drei Kontrollarten</h2>
+        <p>
+          Die Norm unterscheidet drei aufeinander aufbauende Inspektionsstufen. Die genauen Intervalle legt der
+          Betreiber in einem <strong>Inspektionsplan</strong> fest — abhängig von Nutzungsintensität, Gerätetyp,
+          Bodenbelag, Standort und Vandalismusrisiko. Ein stark frequentierter innerstädtischer Spielplatz braucht
+          häufigere Kontrollen als eine selten genutzte Anlage.
+        </p>
+        <div class="grid">
+          <div class="sticker">
+            <span class="chip">👁️</span>
+            <span class="freq">bis täglich / wöchentlich</span>
+            <h3>1. Visuelle Routineinspektion</h3>
+            <p>Sichtkontrolle auf offensichtliche Gefahren durch Nutzung, Witterung oder Vandalismus — etwa Glasscherben, herausragende Teile, Verschmutzung oder fehlende Abdeckungen. Bei hoher Nutzung bis täglich, sonst wöchentlich.</p>
+          </div>
+          <div class="sticker">
+            <span class="chip">🔧</span>
+            <span class="freq">üblich alle 1–3 Monate</span>
+            <h3>2. Operative Inspektion</h3>
+            <p>Eingehendere Prüfung von Funktion und Stabilität: Verschleiß an Lagern, Ketten und Gelenken, Standsicherheit, Zustand des Fallschutzes. Typischerweise ein- bis dreimonatlich, je nach Beanspruchung.</p>
+          </div>
+          <div class="sticker">
+            <span class="chip">📋</span>
+            <span class="freq">mindestens jährlich</span>
+            <h3>3. Jährliche Hauptinspektion</h3>
+            <p>Umfassende Bewertung des Gesamtzustands inkl. Fundamenten, verdeckten Bauteilen und Korrosion — durchgeführt von einer besonders <strong>sachkundigen Person</strong>. Mindestens einmal pro Jahr (etwa alle 12 Monate).</p>
+          </div>
+        </div>
+        <p>
+          Die <strong>Hauptinspektion</strong> ist der anspruchsvollste Teil und wird von einer qualifizierten,
+          sachkundigen Person durchgeführt — intern geschult oder als externer Fachdienstleister (häufig
+          zertifiziert als „Fachkraft/Sachkundiger für Kinderspielplätze"). Sie beurteilt auch Alterung, die
+          Wirksamkeit früherer Reparaturen und Veränderungen durch Witterung oder Bewuchs.
+        </p>
+
+        <h2 id="maengel"><span class="eyebrow">Praxis</span>Typische Mängel auf dem Prüfweg</h2>
+        <p>Bei den Inspektionen tauchen immer wieder dieselben Schwachstellen auf:</p>
+        <ul>
+          <li><strong>Freilegung von Fundamenten:</strong> Ausgespülter oder weggetretener Boden legt Betonfundamente frei — Stolper- und Aufprallgefahr direkt am Gerät.</li>
+          <li><strong>Verschleiß an Gelenken, Lagern &amp; Ketten:</strong> ausgeschlagene Schaukellager, verschlissene oder aufgebogene Kettenglieder, quietschende oder blockierende Drehteile.</li>
+          <li><strong>Fallschutz unzureichend:</strong> zu geringe Schütthöhe bei losem Fallschutz (Sand, Hackschnitzel), verdichtete oder fehlende Flächen, zu kleiner Fallraum unter erhöhten Standflächen.</li>
+          <li><strong>Vandalismus &amp; Fremdkörper:</strong> Glasscherben, Zigarettenkippen, abgebrochene Teile, Graffiti, mutwillig gelockerte Schrauben.</li>
+          <li><strong>Holzfäule &amp; Korrosion:</strong> morsche Pfosten am Übergang Boden/Luft, Risse im Holz, durchrostete Verbinder und Schrauben.</li>
+          <li><strong>Fangstellen &amp; scharfe Kanten:</strong> Spalten, in denen Finger, Kopf oder Kleidung hängen bleiben können, hervorstehende Schraubenenden, verschlissene Kunststoffkappen.</li>
+        </ul>
+
+        <h2 id="management"><span class="eyebrow">Reaktion</span>Mängel-Management: Schweregrad &amp; Sperrung</h2>
+        <p>
+          Einen Mangel zu erkennen ist nur die halbe Pflicht — entscheidend ist die <strong>angemessene und
+          zeitnahe Reaktion</strong>. Bewährt hat sich eine Einstufung nach Schweregrad, die die Dringlichkeit und
+          die nötige Maßnahme direkt vorgibt:
+        </p>
+        <div class="sev-wrap">
+          <table class="sev">
+            <thead>
+              <tr><th>Schweregrad</th><th>Bedeutung</th><th>Maßnahme</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="dot" style="background:#EA5A47"></span>Gefahr</td>
+                <td>Akute Verletzungsgefahr, Gerät nicht sicher benutzbar.</td>
+                <td>Sofort <strong>sperren</strong> oder abbauen, Zugang verhindern, umgehend beheben.</td>
+              </tr>
+              <tr>
+                <td><span class="dot" style="background:#D9A50A"></span>Erheblich</td>
+                <td>Mangel, der sich verschärfen und zur Gefahr werden kann.</td>
+                <td>Kurzfristig terminieren und beheben, Zustand bis dahin beobachten.</td>
+              </tr>
+              <tr>
+                <td><span class="dot" style="background:#14B8A6"></span>Gering</td>
+                <td>Optischer oder leichter Verschleißmangel ohne akutes Risiko.</td>
+                <td>Bei nächster Wartung beheben und dokumentieren.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout">
+          <b>Sperren ist Pflicht, nicht Kür.</b>
+          <p>Wird ein gefährliches Gerät erkannt, aber nicht gesperrt, wiegt das im Schadensfall besonders schwer:
+          Der Betreiber wusste vom Risiko und hat es dennoch bestehen lassen. Sperrung, Meldung an den
+          Verantwortlichen und die anschließende Behebung müssen jeweils mit Datum nachvollziehbar festgehalten sein.</p>
+        </div>
+
+        <h2 id="doku"><span class="eyebrow">Kernpunkt</span>Dokumentation als Haftungsschutz</h2>
+        <p>
+          Vor Gericht gilt sinngemäß: <strong>Was nicht dokumentiert ist, gilt als nicht geschehen.</strong> Selbst
+          gewissenhaft durchgeführte Kontrollen entlasten den Betreiber nur, wenn er sie belegen kann. Kommt es zu
+          einem Unfall, muss der Betreiber nachweisen, dass er seiner Kontroll- und Wartungspflicht ordnungsgemäß
+          nachgekommen ist. Eine lückenlose Dokumentation kehrt die Beweislast faktisch zu seinen Gunsten um.
+        </p>
+        <p>Ein belastbares Kontrollbuch hält für jede Inspektion fest:</p>
+        <ul>
+          <li><strong>Was, wann und von wem</strong> geprüft wurde (Datum, Uhrzeit, Prüfer, Inspektionsart).</li>
+          <li><strong>Wo</strong> die Prüfung stattfand — idealerweise mit Standortnachweis (GPS), der belegt: „Ich war nachweislich vor Ort."</li>
+          <li>Festgestellte <strong>Mängel mit Schweregrad und Foto</strong> — und die dokumentierte Behebung.</li>
+          <li>Auch das Ergebnis „<strong>ohne Beanstandung</strong>" — denn eine unauffällige Kontrolle ist ebenso ein Nachweis wie ein Mangelbericht.</li>
+        </ul>
+        <p>
+          Damit die Aufzeichnungen glaubwürdig bleiben, dürfen sie nicht nachträglich veränderbar sein.
+          <strong>Unveränderliche, chronologische Einträge</strong> (append-only) — bei denen Korrekturen nur als
+          gekennzeichnete Stornos mit Begründung möglich sind — machen ein Kontrollbuch besonders belastbar. Genau
+          hier setzt eine digitale Lösung an: Sie erzwingt Vollständigkeit, ergänzt Zeit- und Ortsstempel automatisch
+          und macht das Kontrollbuch auf Knopfdruck vorlegbar.
+        </p>
+
+        <div class="cta">
+          <span class="suite-pill">🛝 SpielDex</span>
+          <h2>Spielplatzkontrolle gerichtsfest dokumentieren</h2>
+          <p>
+            SpielDex führt dich durch die Checkliste nach <b>DIN EN 1176-7</b>, ergänzt GPS und Zeitstempel
+            automatisch, erfasst Mängel mit Schweregrad und Foto und erzeugt das komplette
+            <b>PDF-Kontrollbuch</b> pro Spielplatz und Zeitraum. Einträge sind unveränderlich — genau das
+            überzeugt im Streitfall.
+          </p>
+          <a class="btn" href="index.html">Mehr über SpielDex erfahren →</a>
+        </div>
+
+        <h2 id="faq"><span class="eyebrow">FAQ</span>Häufige Fragen zur Spielplatzkontrolle</h2>
+        <div class="faq">
+          <details>
+            <summary>Ist die Spielplatzkontrolle gesetzlich vorgeschrieben?</summary>
+            <p>Es gibt kein Gesetz, das die Kontrolle wörtlich anordnet. Sie ergibt sich aber aus der
+            Verkehrssicherungspflicht (§ 823 BGB): Wer einen Spielplatz betreibt, muss ihn in verkehrssicherem
+            Zustand halten. Die DIN EN 1176 legt als anerkannte Regel der Technik fest, wie diese Pflicht in der
+            Praxis erfüllt wird — Betreiber, die sich daran halten, sind rechtlich auf der sicheren Seite.</p>
+          </details>
+          <details>
+            <summary>Wie oft muss ein Spielplatz kontrolliert werden?</summary>
+            <p>Nach DIN EN 1176-7 in drei Stufen: die visuelle Routineinspektion je nach Nutzung bis täglich oder
+            wöchentlich, die operative Inspektion üblicherweise alle ein bis drei Monate und die Hauptinspektion
+            mindestens einmal jährlich. Die genauen Intervalle legt der Betreiber im Inspektionsplan abhängig von
+            Nutzung, Standort und Gerätetyp fest.</p>
+          </details>
+          <details>
+            <summary>Wer haftet, wenn auf dem Spielplatz etwas passiert?</summary>
+            <p>Grundsätzlich der Betreiber (Kommune, Wohnungsunternehmen, Kita-/Schulträger, Verein). Er kann die
+            Kontrolle an einen Dienstleister delegieren, bleibt aber für dessen sorgfältige Auswahl, Anweisung und
+            Überwachung verantwortlich. Ohne Nachweis der ordnungsgemäßen Kontrolle steht der Betreiber im
+            Schadensfall in der Haftung.</p>
+          </details>
+          <details>
+            <summary>Wer darf die jährliche Hauptinspektion durchführen?</summary>
+            <p>Eine besonders sachkundige Person mit entsprechender Qualifikation und Erfahrung — intern geschult
+            oder als externer Sachkundiger, häufig zertifiziert als „Fachkraft für Kinderspielplätze". Sie beurteilt
+            auch verdeckte Bauteile, Fundamente und die Alterung der Geräte.</p>
+          </details>
+          <details>
+            <summary>Was ist der Unterschied zwischen visueller, operativer und Hauptinspektion?</summary>
+            <p>Die visuelle Routineinspektion ist eine kurze Sichtkontrolle auf offensichtliche Gefahren und
+            Vandalismus. Die operative Inspektion prüft gründlicher Funktion, Verschleiß und Stabilität. Die
+            jährliche Hauptinspektion ist die umfassendste Stufe: Sie bewertet den Gesamtzustand samt Fundamenten
+            und verdeckten Teilen und wird von einer sachkundigen Person durchgeführt.</p>
+          </details>
+          <details>
+            <summary>Muss ich einen Spielplatz sperren, wenn ich einen Mangel finde?</summary>
+            <p>Bei einem gefährlichen Mangel mit akuter Verletzungsgefahr ja — das Gerät ist sofort zu sperren oder
+            außer Betrieb zu nehmen, bis der Mangel behoben ist. Weniger schwere Mängel werden nach Schweregrad
+            eingestuft und fristgerecht behoben. Sperrung, Meldung und Behebung sollten immer mit Datum dokumentiert
+            werden.</p>
+          </details>
+          <details>
+            <summary>Warum ist die Dokumentation so wichtig?</summary>
+            <p>Weil der Betreiber im Streitfall nachweisen muss, dass er kontrolliert und gewartet hat. Nur eine
+            lückenlose, nachvollziehbare Dokumentation — am besten unveränderlich und mit Zeit- und Ortsnachweis —
+            entlastet ihn. Auch beanstandungsfreie Kontrollen gehören ins Kontrollbuch, denn sie belegen, dass die
+            Anlage regelmäßig überprüft wurde.</p>
+          </details>
+        </div>
+
+        <p class="disclaimer">
+          Hinweis: Dieser Ratgeber gibt einen allgemeinen Überblick nach bestem Wissen und ersetzt keine
+          Rechtsberatung. Verbindlich sind der jeweils gültige Wortlaut der DIN EN 1176, ergänzende Normen sowie
+          die einschlägigen gesetzlichen Regelungen. Im Zweifel ziehen Sie eine sachkundige Person oder
+          rechtlichen Rat hinzu.
+        </p>
+      </article>
+    </div>
+  </div>
+
+  <svg class="wave" viewBox="0 0 1440 54" preserveAspectRatio="none" aria-hidden="true" style="transform:rotate(180deg)">
+    <path d="M0,30 C240,54 480,6 720,24 C960,42 1200,10 1440,30 L1440,54 L0,54 Z" fill="#FFE4E0"/>
+  </svg>
+
+  <div class="foot">
+    <div class="wrap">
+      <div class="foot-inner">
+        <span>© 2026 SpielDex · Alexander Pfalz</span>
+        <nav>
+          <a href="index.html">Startseite</a>
+          <a href="ratgeber-spielplatzkontrolle.html">Ratgeber</a>
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+          <a href="konto-loeschung.html">Konto löschen</a>
+          <a href="mailto:2easy4trash@gmail.com?subject=SpielDex%20Support">Support</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Ist die Spielplatzkontrolle gesetzlich vorgeschrieben?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Es gibt kein Gesetz, das die Kontrolle wörtlich anordnet. Sie ergibt sich aus der Verkehrssicherungspflicht (§ 823 BGB): Wer einen Spielplatz betreibt, muss ihn in verkehrssicherem Zustand halten. Die DIN EN 1176 legt als anerkannte Regel der Technik fest, wie diese Pflicht in der Praxis erfüllt wird."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie oft muss ein Spielplatz kontrolliert werden?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nach DIN EN 1176-7 in drei Stufen: die visuelle Routineinspektion je nach Nutzung bis täglich oder wöchentlich, die operative Inspektion üblicherweise alle ein bis drei Monate und die Hauptinspektion mindestens einmal jährlich. Die genauen Intervalle legt der Betreiber im Inspektionsplan abhängig von Nutzung, Standort und Gerätetyp fest."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wer haftet, wenn auf dem Spielplatz etwas passiert?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Grundsätzlich der Betreiber (Kommune, Wohnungsunternehmen, Kita- oder Schulträger, Verein). Er kann die Kontrolle an einen Dienstleister delegieren, bleibt aber für dessen sorgfältige Auswahl, Anweisung und Überwachung verantwortlich. Ohne Nachweis der ordnungsgemäßen Kontrolle steht der Betreiber im Schadensfall in der Haftung."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wer darf die jährliche Hauptinspektion durchführen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Eine besonders sachkundige Person mit entsprechender Qualifikation und Erfahrung – intern geschult oder als externer Sachkundiger, häufig zertifiziert als Fachkraft für Kinderspielplätze. Sie beurteilt auch verdeckte Bauteile, Fundamente und die Alterung der Geräte."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was ist der Unterschied zwischen visueller, operativer und Hauptinspektion?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Die visuelle Routineinspektion ist eine kurze Sichtkontrolle auf offensichtliche Gefahren und Vandalismus. Die operative Inspektion prüft gründlicher Funktion, Verschleiß und Stabilität. Die jährliche Hauptinspektion ist die umfassendste Stufe: Sie bewertet den Gesamtzustand samt Fundamenten und verdeckten Teilen und wird von einer sachkundigen Person durchgeführt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Muss ich einen Spielplatz sperren, wenn ich einen Mangel finde?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bei einem gefährlichen Mangel mit akuter Verletzungsgefahr ja – das Gerät ist sofort zu sperren oder außer Betrieb zu nehmen, bis der Mangel behoben ist. Weniger schwere Mängel werden nach Schweregrad eingestuft und fristgerecht behoben. Sperrung, Meldung und Behebung sollten immer mit Datum dokumentiert werden."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Warum ist die Dokumentation so wichtig?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Weil der Betreiber im Streitfall nachweisen muss, dass er kontrolliert und gewartet hat. Nur eine lückenlose, nachvollziehbare Dokumentation – am besten unveränderlich und mit Zeit- und Ortsnachweis – entlastet ihn. Auch beanstandungsfreie Kontrollen gehören ins Kontrollbuch, denn sie belegen, dass die Anlage regelmäßig überprüft wurde."
+        }
+      }
+    ]
+  }
+  </script>
+</body>
+</html>
