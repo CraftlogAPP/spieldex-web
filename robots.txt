@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://spieldex.dexware.app/sitemap.xml
