@@ -47,9 +47,8 @@
       -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
       border-bottom: 3px solid var(--petrol); }
     header { padding: 14px 0; display: flex; align-items: center; gap: 12px; }
-    .logo { width: 40px; height: 40px; background: var(--coral); border-radius: 14px;
-      display: grid; place-items: center; font-size: 21px;
-      box-shadow: 4px 4px 0 var(--petrol); }
+    .logo { width: 40px; height: 40px; border-radius: 14px; display: block;
+      object-fit: cover; box-shadow: 4px 4px 0 var(--petrol); }
     .brand { font-size: 20px; font-weight: 800; letter-spacing: -0.3px; }
     .brand b { color: var(--coral); }
 
@@ -210,7 +209,7 @@
   <div class="sitehead">
     <div class="wrap">
       <header>
-        <span class="logo">🛝</span>
+        <img class="logo" src="spieldex-icon.png" alt="SpielDex Logo" width="40" height="40" />
         <span class="brand">Spiel<b>Dex</b></span>
         <a href="ratgeber-spielplatzkontrolle.html" style="margin-left:auto;font-size:14.5px;font-weight:700;color:var(--petrol);text-decoration:none">Ratgeber</a>
       </header>
