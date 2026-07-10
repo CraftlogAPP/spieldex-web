@@ -50,9 +50,9 @@
       border-bottom: 3px solid var(--petrol); }
     .sitehead .wrap { max-width: 1020px; }
     header { padding: 14px 0; display: flex; align-items: center; gap: 12px; }
-    .logo { width: 40px; height: 40px; background: var(--coral); border-radius: 14px;
-      display: grid; place-items: center; font-size: 21px; text-decoration: none;
-      box-shadow: 4px 4px 0 var(--petrol); }
+    .logo { width: 40px; height: 40px; border-radius: 14px; display: block;
+      text-decoration: none; box-shadow: 4px 4px 0 var(--petrol); }
+    .logo img { width: 100%; height: 100%; border-radius: 14px; object-fit: cover; display: block; }
     .brand { font-size: 20px; font-weight: 800; letter-spacing: -0.3px; color: var(--ink); text-decoration: none; }
     .brand b { color: var(--coral); }
     .head-nav { margin-left: auto; display: flex; gap: 18px; font-size: 14.5px; font-weight: 700; }
@@ -168,7 +168,7 @@
   <div class="sitehead">
     <div class="wrap">
       <header>
-        <a class="logo" href="index.html" aria-label="Zur SpielDex-Startseite">🛝</a>
+        <a class="logo" href="index.html" aria-label="Zur SpielDex-Startseite"><img src="spieldex-icon.png" alt="" width="40" height="40" /></a>
         <a class="brand" href="index.html">Spiel<b>Dex</b></a>
         <nav class="head-nav">
           <a href="index.html#funktionen">Funktionen</a>
