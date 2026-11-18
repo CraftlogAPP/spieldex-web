@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spielplatz-Sichtkontrolle: Checkliste (DIN EN 1176-7) | SpielDex</title>
+  <meta name="description" content="Was gehört in die wöchentliche Spielplatz-Sichtkontrolle? 12 Prüfpunkte nach DIN EN 1176-7, Sofortmaßnahmen bei Gefahr und Einträge fürs Kontrollbuch." />
+  <meta name="robots" content="all" />
+  <meta name="theme-color" content="#FBF6F3" />
+  <!-- seo:start -->
+  <link rel="icon" type="image/png" href="/spieldex-icon.png" />
+  <link rel="canonical" href="https://spieldex.dexware.app/ratgeber-spielplatz-checkliste.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="SpielDex" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:title" content="Spielplatz-Sichtkontrolle: Checkliste für die Routine-Inspektion" />
+  <meta property="og:description" content="Was gehört in die wöchentliche Spielplatz-Sichtkontrolle? 12 Prüfpunkte nach DIN EN 1176-7, Sofortmaßnahmen bei Gefahr und Einträge fürs Kontrollbuch." />
+  <meta property="og:url" content="https://spieldex.dexware.app/ratgeber-spielplatz-checkliste.html" />
+  <meta property="og:image" content="https://spieldex.dexware.app/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Spielplatz-Sichtkontrolle: Checkliste für die Routine-Inspektion" />
+  <meta name="twitter:description" content="Was gehört in die wöchentliche Spielplatz-Sichtkontrolle? 12 Prüfpunkte nach DIN EN 1176-7, Sofortmaßnahmen bei Gefahr und Einträge fürs Kontrollbuch." />
+  <meta name="twitter:image" content="https://spieldex.dexware.app/og-image.png" />
+  <!-- seo:end -->
+  <style>
+    :root {
+      --paper: #FBF6F3; --card: #FFFFFF; --ink: #16282B; --muted: #6B8388;
+      --coral: #EA5A47; --coral-deep: #C74433; --coral-soft: #FFE4E0;
+      --petrol: #12393E; --petrol-night: #0B1F22; --petrol-line: #1E4247;
+      --teal: #14B8A6; --teal-soft: #CCFBF1; --sand: #FDE68A;
+      --border: #EBDDD8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--paper); color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden;
+    }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 0 24px; }
+    a { color: var(--coral-deep); }
+
+    /* Header wie index.html */
+    .sitehead { position: sticky; top: 0; z-index: 50; background: rgba(251,246,243,.92);
+      -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+      border-bottom: 3px solid var(--petrol); }
+    .sitehead .wrap { max-width: 1020px; }
+    header { padding: 14px 0; display: flex; align-items: center; gap: 12px; }
+    .logo { width: 40px; height: 40px; border-radius: 14px; display: block;
+      text-decoration: none; box-shadow: 4px 4px 0 var(--petrol); }
+    .logo img { width: 100%; height: 100%; border-radius: 14px; object-fit: cover; display: block; }
+    .brand { font-size: 20px; font-weight: 800; letter-spacing: -0.3px; color: var(--ink); text-decoration: none; }
+    .brand b { color: var(--coral); }
+    .head-nav { margin-left: auto; display: flex; gap: 18px; font-size: 14.5px; font-weight: 700; }
+    .head-nav a { color: var(--petrol); text-decoration: none; }
+    .head-nav a:hover { color: var(--coral); }
+    @media (max-width: 560px) { .head-nav { display: none; } }
+
+    /* Artikel-Hero */
+    .art-hero { padding: 48px 0 8px; }
+    .crumbs { font-size: 13px; color: var(--muted); font-weight: 600; margin-bottom: 18px; }
+    .crumbs a { color: var(--muted); text-decoration: none; }
+    .crumbs a:hover { color: var(--coral); }
+    .kicker { display: inline-block; background: var(--petrol); color: #fff; font-size: 12.5px;
+      font-weight: 800; letter-spacing: .6px; padding: 7px 14px; border-radius: 999px; margin-bottom: 20px; }
+    h1 { font-size: clamp(30px, 4.6vw, 46px); font-weight: 900; letter-spacing: -1.2px; line-height: 1.12; }
+    .marker { position: relative; white-space: nowrap; }
+    .marker::after { content: ''; position: absolute; left: -2%; right: -2%; bottom: 6%; height: 34%;
+      background: var(--sand); z-index: -1; border-radius: 6px; transform: rotate(-1.2deg); }
+    .standfirst { margin-top: 22px; font-size: 18px; color: var(--muted); }
+    .standfirst strong { color: var(--ink); }
+    .meta-row { margin-top: 20px; font-size: 13px; color: var(--muted); font-weight: 600;
+      border-top: 2px solid var(--border); border-bottom: 2px solid var(--border); padding: 12px 0; }
+
+    /* Wellen-Trenner */
+    .wave { display: block; width: 100%; height: 46px; }
+
+    /* Artikel-Körper */
+    article { padding: 30px 0 10px; }
+    article h2 { font-size: clamp(23px, 3.4vw, 30px); font-weight: 900; letter-spacing: -0.6px; margin: 44px 0 6px; }
+    article h2 .eyebrow { display: block; color: var(--coral); font-size: 12.5px; font-weight: 900;
+      letter-spacing: 1.4px; text-transform: uppercase; margin-bottom: 6px; }
+    article h3 { font-size: 18px; font-weight: 800; margin: 26px 0 6px; }
+    article p { font-size: 16.5px; margin: 12px 0; }
+    article ul, article ol { margin: 12px 0 12px 4px; padding-left: 22px; }
+    article li { font-size: 16.5px; margin: 7px 0; }
+    article strong { color: var(--ink); }
+
+    /* Inhaltsverzeichnis-Box */
+    .toc { background: var(--card); border: 2px solid var(--petrol); border-radius: 20px;
+      padding: 22px 24px; box-shadow: 6px 6px 0 var(--border); margin: 26px 0 8px; }
+    .toc b { display: block; font-size: 13px; font-weight: 900; letter-spacing: 1px;
+      text-transform: uppercase; color: var(--coral); margin-bottom: 10px; }
+    .toc ol { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 26px; }
+    @media (max-width: 560px) { .toc ol { columns: 1; } }
+    .toc li { font-size: 14.5px; margin: 5px 0; break-inside: avoid; }
+    .toc a { color: var(--ink); text-decoration: none; font-weight: 600; }
+    .toc a:hover { color: var(--coral); }
+
+    /* Sticker-Karten für die 3 Inspektionsarten */
+    .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); margin: 22px 0 8px; }
+    .sticker { background: var(--card); border: 2px solid var(--petrol); border-radius: 20px;
+      padding: 22px 20px; box-shadow: 6px 6px 0 var(--border); }
+    .sticker .chip { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center;
+      font-size: 22px; margin-bottom: 12px; background: var(--coral-soft); border: 2px solid var(--coral); }
+    .sticker:nth-child(2) .chip { background: var(--teal-soft); border-color: var(--teal); }
+    .sticker:nth-child(3) .chip { background: var(--sand); border-color: #D9A50A; }
+    .sticker h3 { font-size: 16.5px; font-weight: 800; margin: 0 0 4px; }
+    .sticker .freq { font-size: 12.5px; font-weight: 800; letter-spacing: .4px; color: var(--petrol); text-transform: uppercase; }
+    .sticker p { font-size: 14.5px; color: var(--muted); margin: 8px 0 0; }
+
+    /* Hinweis-Box */
+    .callout { background: var(--coral-soft); border: 2px solid var(--coral); border-radius: 18px;
+      padding: 20px 22px; margin: 24px 0; }
+    .callout b { color: var(--coral-deep); }
+    .callout p { margin: 6px 0 0; font-size: 15.5px; }
+
+    /* Schweregrad-Tabelle */
+    .sev { border-collapse: collapse; width: 100%; margin: 18px 0; font-size: 15px; }
+    .sev th, .sev td { text-align: left; padding: 11px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .sev th { font-size: 12.5px; letter-spacing: .6px; text-transform: uppercase; color: var(--petrol); }
+    .sev tr td:first-child { font-weight: 800; white-space: nowrap; }
+    .sev-wrap { overflow-x: auto; border: 2px solid var(--petrol); border-radius: 18px; box-shadow: 6px 6px 0 var(--border); margin: 22px 0; }
+    .dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 7px; vertical-align: baseline; }
+
+    /* CTA-Block */
+    .cta { background: var(--petrol-night); color: #ECF6F5; border-radius: 26px;
+      padding: 34px 30px; border: 2px solid var(--petrol); box-shadow: 8px 8px 0 var(--coral-soft); margin: 40px 0 10px; }
+    .cta .suite-pill { display: inline-block; font-size: 12px; font-weight: 900; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--petrol-night); background: #2DD4BF; padding: 6px 14px; border-radius: 999px; }
+    .cta h2 { color: #fff; margin: 14px 0 0; }
+    .cta p { color: #8FB0B4; font-size: 15.5px; margin: 12px 0 0; }
+    .cta p b { color: #ECF6F5; }
+    .btn { display: inline-block; font-weight: 800; font-size: 16px; padding: 14px 26px;
+      border-radius: 14px; text-decoration: none; color: #fff; background: var(--coral);
+      border: 2px solid var(--petrol); box-shadow: 5px 5px 0 var(--petrol);
+      transition: transform .12s ease, box-shadow .12s ease; margin-top: 20px; }
+    .btn:hover { transform: translate(2px, 2px); box-shadow: 3px 3px 0 var(--petrol); }
+    .cta .btn { background: #2DD4BF; color: var(--petrol-night); border-color: #2DD4BF; box-shadow: 5px 5px 0 rgba(45,212,191,.25); }
+
+    /* FAQ */
+    .faq { margin: 20px 0 8px; }
+    .faq details { background: var(--card); border: 2px solid var(--border); border-radius: 16px;
+      padding: 4px 20px; margin-bottom: 12px; transition: border-color .15s ease; }
+    .faq details[open] { border-color: var(--coral); }
+    .faq summary { font-size: 16.5px; font-weight: 800; padding: 14px 0; cursor: pointer; list-style: none; position: relative; padding-right: 30px; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; position: absolute; right: 2px; top: 12px; font-size: 24px; font-weight: 700; color: var(--coral); }
+    .faq details[open] summary::after { content: '–'; }
+    .faq details p { font-size: 15.5px; color: var(--muted); margin: 0 0 16px; }
+
+    .disclaimer { font-size: 13px; color: var(--muted); margin: 30px 0 10px; padding-top: 18px; border-top: 2px solid var(--border); }
+
+    /* Footer wie index.html */
+    .foot { background: var(--petrol-night); color: #8FB0B4; margin-top: 40px; }
+    .foot .wrap { max-width: 1020px; }
+    .foot-inner { display: flex; flex-wrap: wrap; gap: 18px; justify-content: space-between;
+      padding: 30px 0 46px; font-size: 14px; }
+    .foot a { color: #DCEDEF; }
+    .foot nav { display: flex; gap: 16px; flex-wrap: wrap; }
+  </style>
+
+  <style>
+    /* Ratgeber-Ergänzungen (Tabelle, Kurzantwort, Quellen) — neutral, passt zu hellem und dunklem Design */
+    .rg-scroll { overflow-x: auto; margin: 10px 0 22px; -webkit-overflow-scrolling: touch; }
+    .rg-table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; min-width: 520px; }
+    .rg-table th, .rg-table td { border: 1px solid rgba(127,127,127,.32); padding: 9px 11px; text-align: left; vertical-align: top; }
+    .rg-table th { background: rgba(127,127,127,.12); font-weight: 800; }
+    .rg-kurz { border: 1px solid rgba(127,127,127,.35); border-radius: 12px; padding: 16px 18px; margin: 18px 0 24px; background: rgba(127,127,127,.07); }
+    .rg-kurz > b:first-child { display: block; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; opacity: .8; }
+    .rg-kurz ul { margin: 6px 0 0; padding-left: 20px; }
+    .rg-kurz li { margin-bottom: 5px; }
+    .rg-quellen { font-size: 14px; opacity: .9; }
+    .rg-quellen li { font-size: 14px !important; margin-bottom: 4px; }
+    .rg-weiter { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); margin: 12px 0 26px; }
+    .rg-weiter a { display: block; border: 1px solid rgba(127,127,127,.35); border-radius: 10px; padding: 12px 14px; text-decoration: none; font-weight: 700; }
+    .rg-weiter a span { display: block; font-weight: 400; font-size: 13.5px; opacity: .75; margin-top: 2px; }
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Spielplatz-Sichtkontrolle: Checkliste für die visuelle Routine-Inspektion nach DIN EN 1176-7","description":"Was gehört in die wöchentliche Spielplatz-Sichtkontrolle? 12 Prüfpunkte nach DIN EN 1176-7, Sofortmaßnahmen bei Gefahr und Einträge fürs Kontrollbuch.","inLanguage":"de","datePublished":"2026-11-19","dateModified":"2026-11-19","author":{"@type":"Organization","name":"Dexware","url":"https://dexware.app/"},"publisher":{"@type":"Organization","name":"Dexware","url":"https://dexware.app/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://spieldex.dexware.app/ratgeber-spielplatz-checkliste.html"},"image":"https://spieldex.dexware.app/og-image.png"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"SpielDex","item":"https://spieldex.dexware.app/"},{"@type":"ListItem","position":2,"name":"Ratgeber","item":"https://dexware.app/ratgeber.html"},{"@type":"ListItem","position":3,"name":"Checkliste Sichtkontrolle","item":"https://spieldex.dexware.app/ratgeber-spielplatz-checkliste.html"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Wie oft muss die Sichtkontrolle auf dem Spielplatz gemacht werden?","acceptedAnswer":{"@type":"Answer","text":"DIN EN 1176-7 nennt keine starre Frist. Üblich ist bei normal genutzten Spielplätzen eine wöchentliche Sichtkontrolle, bei stark genutzten oder vandalismusgefährdeten Anlagen bis täglich. Das Intervall legt der Betreiber im Inspektionsplan fest."}},{"@type":"Question","name":"Wer darf die Sichtkontrolle durchführen?","acceptedAnswer":{"@type":"Answer","text":"Eine eingewiesene Person, zum Beispiel aus dem Bauhof, dem Hausmeisterdienst oder der Kita. Für die visuelle Routine-Inspektion ist keine Sachkundigenprüfung nötig, wohl aber eine Einweisung in die Anlage und die typischen Gefahren. Die jährliche Hauptinspektion macht eine sachkundige Person."}},{"@type":"Question","name":"Wie lange dauert eine Sichtkontrolle?","acceptedAnswer":{"@type":"Answer","text":"Bei einem üblichen Spielplatz meist 10 bis 20 Minuten. Mit einer festen Checkliste und gleicher Reihenfolge geht es schneller und es wird nichts vergessen."}},{"@type":"Question","name":"Was muss im Kontrollbuch stehen?","acceptedAnswer":{"@type":"Answer","text":"Datum und Uhrzeit, Spielplatz, Name der kontrollierenden Person, das Ergebnis je Prüfpunkt, festgestellte Mängel mit Foto und die getroffene Maßnahme, etwa Sperrung, Reparaturauftrag oder Entfernen von Glasscherben."}},{"@type":"Question","name":"Muss ich bei einem Mangel das Spielgerät sperren?","acceptedAnswer":{"@type":"Answer","text":"Wenn eine akute Verletzungsgefahr besteht, ja: sofort sperren oder abbauen und den Zugang verhindern, dann beheben lassen. Geringe Mängel werden dokumentiert und bei der nächsten Wartung behoben."}},{"@type":"Question","name":"Gilt die Checkliste auch für Spielplätze in Wohnanlagen und Kitas?","acceptedAnswer":{"@type":"Answer","text":"Ja. Die Pflicht zur Kontrolle trifft jeden Betreiber eines Spielplatzes, also auch Hausverwaltungen, Wohnungsunternehmen, Kitas, Schulen, Gastronomie und Campingplätze."}}]}</script>
+</head>
+<body>
+  <div class="sitehead">
+    <div class="wrap">
+      <header>
+        <a class="logo" href="index.html" aria-label="Zur SpielDex-Startseite"><img src="spieldex-icon.png" alt="" width="40" height="40" /></a>
+        <a class="brand" href="index.html">Spiel<b>Dex</b></a>
+        <nav class="head-nav">
+          <a href="index.html#funktionen">Funktionen</a>
+          <a href="index.html#preise">Preise</a>
+          <a href="ratgeber-spielplatzkontrolle.html">Ratgeber</a>
+        </nav>
+      </header>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="art-hero">
+      <div class="crumbs"><a href="index.html">Start</a> › Ratgeber › Checkliste Sichtkontrolle</div>
+      <span class="kicker">Ratgeber · DIN EN 1176-7 · Checkliste</span>
+      <h1>Spielplatz-Sichtkontrolle: <span class="marker">die Checkliste für jede Woche</span></h1>
+      <p class="land-hinweis" style="margin:16px 0 20px;padding:12px 16px;border:1px solid rgba(127,127,127,.35);border-radius:12px;font-size:14.5px;line-height:1.55"><strong>Gilt für welches Land?</strong> Die Norm <strong>EN 1176</strong> gilt europaweit (Deutschland DIN EN 1176, <strong>Österreich</strong> ÖNORM EN 1176, <strong>Schweiz</strong> SN EN 1176). Die Haftung richtet sich in Deutschland nach § 823 BGB, in Österreich nach § 1319 ABGB, in der Schweiz nach Art. 58 OR mit den Empfehlungen der BFU. Die Checkliste passt für alle drei Länder.</p>
+      <p class="standfirst">
+        Die <strong>visuelle Routine-Inspektion</strong> ist die häufigste der drei Kontrollen nach DIN EN 1176-7 —
+        und die, bei der im Alltag am meisten untergeht. Diese Checkliste zeigt, <strong>worauf es bei jedem
+        Rundgang ankommt</strong>, was sofort zu tun ist und was ins Kontrollbuch gehört.
+      </p>
+      <div class="meta-row">Stand: November 2026 · Lesezeit ca. 6 Minuten · Für Kommunen, Bauhöfe, Hausverwaltungen, Kitas und Hausmeisterdienste</div>
+    </div>
+  </div>
+
+  <svg class="wave" viewBox="0 0 1440 54" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,30 C240,54 480,6 720,24 C960,42 1200,10 1440,30 L1440,54 L0,54 Z" fill="#FFE4E0"/>
+  </svg>
+
+  <div style="background:#FFE4E0">
+    <div class="wrap">
+      <article>
+        <div class="rg-kurz"><b>Die Antwort in Kürze</b>
+  <ul>
+    <li>Die <strong>visuelle Routine-Inspektion</strong> erkennt offensichtliche Gefahren durch Nutzung, Wetter und Vandalismus.</li>
+    <li>Üblich ist sie <strong>wöchentlich</strong>, bei stark genutzten Plätzen bis <strong>täglich</strong> — festgelegt im Inspektionsplan des Betreibers.</li>
+    <li>Durchführen darf sie eine <strong>eingewiesene Person</strong>; die jährliche Hauptinspektion macht ein Sachkundiger.</li>
+    <li>Akute Gefahr: <strong>sofort sperren</strong>, dann beheben. Alles wird mit Datum, Name und Befund dokumentiert.</li>
+  </ul>
+</div>
+
+        <h2 id="einordnung"><span class="eyebrow">Einordnung</span>Wo die Sichtkontrolle hingehört</h2>
+        <p>
+          DIN EN 1176-7 unterscheidet drei Kontrollarten: die <strong>visuelle Routine-Inspektion</strong> (je nach
+          Nutzung bis täglich oder wöchentlich), die <strong>operative Inspektion</strong> (üblich alle ein bis drei
+          Monate, mit Blick auf Verschleiß und Funktion) und die <strong>jährliche Hauptinspektion</strong> durch eine
+          sachkundige Person. Die Grundlagen dazu stehen im
+          <a href="ratgeber-spielplatzkontrolle.html">Ratgeber Spielplatzkontrolle</a>. Hier geht es um den
+          wöchentlichen Rundgang — er ist kurz, aber er ist der, der Unfälle zwischen den großen Prüfungen verhindert.
+        </p>
+
+        <h2 id="checkliste"><span class="eyebrow">Checkliste</span>12 Prüfpunkte für den Rundgang</h2>
+        <p>Am besten immer in derselben Reihenfolge — vom Zugang einmal rund um die Anlage, Gerät für Gerät:</p>
+<div class="sev-wrap">
+  <table class="sev">
+    <thead><tr><th>#</th><th>Prüfpunkt</th><th>Worauf achten</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Zugang, Zaun, Tore</td><td>Tor schließt (falls vorhanden selbstschließend), Zaun ohne Lücken oder spitze Teile</td></tr>
+      <tr><td>2</td><td>Beschilderung</td><td>Betreiberschild mit Kontakt und Notruf vorhanden und lesbar</td></tr>
+      <tr><td>3</td><td>Gefährlicher Abfall</td><td>Glasscherben, Spritzen, Dosen, Hundekot — sofort entfernen bzw. absperren</td></tr>
+      <tr><td>4</td><td>Fallschutz</td><td>Sand oder Kies ausreichend hoch und locker, Kuhlen unter Schaukel und Rutsche ausgleichen, Platten fest</td></tr>
+      <tr><td>5</td><td>Fremdkörper im Fallschutz</td><td>Steine, Äste, Wurzeln oder Fundamentkanten, die herausschauen</td></tr>
+      <tr><td>6</td><td>Schaukeln</td><td>Ketten und Aufhängungen vollständig, Sitze unbeschädigt, nichts verdreht oder hochgeschlungen</td></tr>
+      <tr><td>7</td><td>Rutschen</td><td>Rutschfläche glatt und ohne Risse, Auslauf frei, Einstieg und Geländer fest</td></tr>
+      <tr><td>8</td><td>Klettergeräte, Netze, Seile</td><td>Seile nicht durchgescheuert, Netze ohne Risse, Verbindungen fest</td></tr>
+      <tr><td>9</td><td>Holz und Metall</td><td>Splitter, scharfe Kanten, herausstehende Schrauben oder Nägel, fehlende Abdeckkappen</td></tr>
+      <tr><td>10</td><td>Standfestigkeit</td><td>Gerät wackelt nicht auffällig, keine sichtbar gelösten Teile oder Pfosten</td></tr>
+      <tr><td>11</td><td>Vandalismus und Brandspuren</td><td>abgebrochene, verbogene oder angebrannte Teile, Schmierereien mit Folgeschäden</td></tr>
+      <tr><td>12</td><td>Umfeld und Wetter</td><td>tote oder herabhängende Äste, Pfützen, Eis, Wespennester, Sitzbänke und Abfallbehälter</td></tr>
+    </tbody>
+  </table>
+</div>
+
+        <div class="callout">
+          <b>Was die Sichtkontrolle nicht leistet</b>
+          <p>Verdeckte Fundamente, Korrosion im Boden, Fangstellen für Kopf und Finger oder die Prüfung der
+          Fallhöhen gehören in die operative und die jährliche Hauptinspektion. Wer beim Rundgang etwas
+          Auffälliges sieht, meldet es — beurteilen und freigeben muss dann die sachkundige Person.</p>
+        </div>
+
+        <h2 id="mangel"><span class="eyebrow">Reaktion</span>Was tun, wenn etwas nicht stimmt?</h2>
+        <ul>
+          <li><strong>Akute Gefahr</strong> (z. B. abgerissene Kette, scharfe Bruchkante, Spritze im Sand): Gerät sofort sperren oder abbauen, Zugang verhindern, Foto machen, Reparatur veranlassen.</li>
+          <li><strong>Erheblicher Mangel</strong> (z. B. stark ausgespielter Fallschutz, lockere Schraube): kurzfristig beheben lassen, bis dahin beobachten.</li>
+          <li><strong>Geringer Mangel</strong> (z. B. Schmiererei, verblasstes Schild): bei der nächsten Wartung erledigen und dokumentieren.</li>
+        </ul>
+
+        <h2 id="doku"><span class="eyebrow">Nachweis</span>Was ins Kontrollbuch gehört</h2>
+        <p>
+          Kommt es zu einem Unfall, zählt nicht, dass kontrolliert wurde, sondern dass man es <strong>belegen</strong>
+          kann. Zu jedem Rundgang gehören: Datum und Uhrzeit, Spielplatz, Name der kontrollierenden Person, Ergebnis
+          je Prüfpunkt, Mängel mit Foto und Schweregrad, die getroffene Maßnahme und wann der Mangel behoben wurde.
+          Ein Eintrag „alles in Ordnung“ ist genauso wichtig wie ein Mangel — er zeigt, dass die Kontrolle stattfand.
+        </p>
+
+        <h2 id="quellen"><span class="eyebrow">Quellen</span>Normen und Grundlagen</h2>
+<ul class="rg-quellen">
+  <li>DIN EN 1176-7 Spielplatzgeräte und Spielplatzböden — Anleitung für Installation, Inspektion, Wartung und Betrieb</li>
+  <li>DIN EN 1176-1 Allgemeine sicherheitstechnische Anforderungen; DIN EN 1177 Stoßdämpfende Spielplatzböden</li>
+  <li>Haftung: § 823 BGB (DE), § 1319 ABGB (AT), Art. 58 OR (CH)</li>
+</ul>
+
+        <div class="cta">
+          <span class="suite-pill">SpielDex</span>
+          <h2>Die Checkliste auf dem Handy</h2>
+          <p>
+            <b>SpielDex</b> führt durch die Kontrolle nach DIN EN 1176-7, setzt Datum, Uhrzeit und GPS automatisch,
+            erfasst Mängel mit Schweregrad und Foto und erzeugt das PDF-Kontrollbuch je Spielplatz. Die jährliche
+            Hauptinspektion bleibt Aufgabe der sachkundigen Person.
+          </p>
+          <a class="btn" href="index.html">Mehr über SpielDex erfahren →</a>
+        </div>
+
+        <h2 id="faq"><span class="eyebrow">FAQ</span>Häufige Fragen zur Sichtkontrolle</h2>
+        <div class="faq">
+          <details>
+            <summary>Wie oft muss die Sichtkontrolle auf dem Spielplatz gemacht werden?</summary>
+            <p>DIN EN 1176-7 nennt keine starre Frist. Üblich ist bei normal genutzten Spielplätzen eine wöchentliche Sichtkontrolle, bei stark genutzten oder vandalismusgefährdeten Anlagen bis täglich. Das Intervall legt der Betreiber im Inspektionsplan fest.</p>
+          </details>
+          <details>
+            <summary>Wer darf die Sichtkontrolle durchführen?</summary>
+            <p>Eine eingewiesene Person, zum Beispiel aus dem Bauhof, dem Hausmeisterdienst oder der Kita. Für die visuelle Routine-Inspektion ist keine Sachkundigenprüfung nötig, wohl aber eine Einweisung in die Anlage und die typischen Gefahren. Die jährliche Hauptinspektion macht eine sachkundige Person.</p>
+          </details>
+          <details>
+            <summary>Wie lange dauert eine Sichtkontrolle?</summary>
+            <p>Bei einem üblichen Spielplatz meist 10 bis 20 Minuten. Mit einer festen Checkliste und gleicher Reihenfolge geht es schneller und es wird nichts vergessen.</p>
+          </details>
+          <details>
+            <summary>Was muss im Kontrollbuch stehen?</summary>
+            <p>Datum und Uhrzeit, Spielplatz, Name der kontrollierenden Person, das Ergebnis je Prüfpunkt, festgestellte Mängel mit Foto und die getroffene Maßnahme, etwa Sperrung, Reparaturauftrag oder Entfernen von Glasscherben.</p>
+          </details>
+          <details>
+            <summary>Muss ich bei einem Mangel das Spielgerät sperren?</summary>
+            <p>Wenn eine akute Verletzungsgefahr besteht, ja: sofort sperren oder abbauen und den Zugang verhindern, dann beheben lassen. Geringe Mängel werden dokumentiert und bei der nächsten Wartung behoben.</p>
+          </details>
+          <details>
+            <summary>Gilt die Checkliste auch für Spielplätze in Wohnanlagen und Kitas?</summary>
+            <p>Ja. Die Pflicht zur Kontrolle trifft jeden Betreiber eines Spielplatzes, also auch Hausverwaltungen, Wohnungsunternehmen, Kitas, Schulen, Gastronomie und Campingplätze.</p>
+          </details>
+        </div>
+
+<div class="rg-weiter">
+  <a href="ratgeber-spielplatzkontrolle.html">Spielplatzkontrolle nach DIN EN 1176<span>Pflicht, Fristen, die drei Inspektionsarten</span></a>
+  <a href="https://objektdex.dexware.app/ratgeber-leistungsnachweis-hausbetreuung.html">Leistungsnachweis Hausbetreuung<span>Wenn der Spielplatz zum Objekt gehört</span></a>
+  <a href="https://dexware.app/ratgeber.html">Alle Ratgeber<span>Prüfpflichten und Fristen im Überblick</span></a>
+</div>
+
+        <p class="disclaimer">
+          Dieser Ratgeber gibt einen allgemeinen Überblick (Stand 11/2026) und ersetzt keine Rechtsberatung.
+          Verbindlich sind der gültige Wortlaut der DIN EN 1176, die Herstellerangaben und die gesetzlichen Regelungen.
+          Im Zweifel eine sachkundige Person hinzuziehen.
+        </p>
+      </article>
+    </div>
+  </div>
+
+  <svg class="wave" viewBox="0 0 1440 54" preserveAspectRatio="none" aria-hidden="true" style="transform:rotate(180deg)">
+    <path d="M0,30 C240,54 480,6 720,24 C960,42 1200,10 1440,30 L1440,54 L0,54 Z" fill="#FFE4E0"/>
+  </svg>
+
+  <div class="foot">
+    <div class="wrap">
+      <div class="foot-inner">
+        <span>© 2026 SpielDex · Alexander Pfalz</span>
+        <nav>
+          <a href="index.html">Startseite</a>
+          <a href="ratgeber-spielplatzkontrolle.html">Ratgeber</a>
+          <a href="ratgeber-spielplatz-checkliste.html">Checkliste Sichtkontrolle</a>
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+          <a href="konto-loeschung.html">Konto löschen</a>
+          <a href="mailto:support@dexware.app?subject=SpielDex%20Support">Support</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
