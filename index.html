@@ -458,9 +458,14 @@
     @media (max-width: 400px) {
       .ios-tab { display: flex; }
       .ipw-visual { height: 420px; }
-      .ipw.tall .ipw-visual { height: 470px; }
+      .ipw.tall .ipw-visual { height: 484px; }
       .ipw-visual .phone.a { --pw: 186px; } .ipw-visual .phone.b { --pw: 160px; }
       .ipw-home { left: 12%; }
+    }
+    /* Schmale Handys (360 px): beide Bildschirme nebeneinander, ohne dass der vordere den hinteren verdeckt. */
+    @media (max-width: 374px) {
+      .ipw.tall .ipw-visual { height: 462px; }
+      .ipw-visual .phone.a { --pw: 172px; } .ipw-visual .phone.b { --pw: 150px; }
     }
   </style>
   <script>document.documentElement.classList.add('js')</script>
@@ -537,12 +542,12 @@
           <ol class="ipw-steps">
             <li><span><b>Im Browser öffnen</b> und anmelden — oder kostenlos ein Konto anlegen.</span></li>
             <li><span><b>„Teilen“ → „Zum Home-Bildschirm“</b> antippen.</span></li>
-            <li><span><b>Fertig:</b> SpielDex liegt wie eine App auf deinem Startbildschirm.</span></li>
+            <li><span><b>Fertig:</b> SpielDex liegt wie eine App auf deinem Home-Bildschirm.</span></li>
           </ol>
           <div class="cta"><a class="btn" href="https://dashboard.dexware.app/app/spieldex/vor-ort" target="_blank" rel="noopener">Im Browser öffnen</a></div>
           <p class="fine">Gut zu wissen: Im Funkloch bleiben deine Eingaben auf dem Gerät und werden gesendet, sobald wieder Netz da ist. QR-Scan, Erinnerungen und einige Extras gibt es vorerst nur in der Android-App. Es gelten dieselben Gratis-Grenzen wie in der App.</p>
           <div class="ipw-buy">
-            <div class="ipw-buy-head"><b>SpielDex Pro direkt im Browser kaufen</b><small>Ohne App-Store — Karte oder PayPal, Preise inkl. USt.</small></div>
+            <div class="ipw-buy-head"><b>SpielDex Pro direkt im Browser kaufen</b><small>Ohne App Store — Karte oder PayPal, Preise inkl. MwSt.</small></div>
             <div class="ipw-plans"><div><span>Monatlich</span><b>9,99 €</b><small>pro Monat</small></div></div>
             <span class="btn off" aria-disabled="true">In Kürze verfügbar</span>
             <p>14 Tage Geld zurück · jederzeit kündbar · Verkäufer und Zahlungsabwicklung: Paddle. Der Tarif gilt für dein Konto — im Browser und später in der App. Bis dahin gibt es Pro in der Android-App.</p>
