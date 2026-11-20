@@ -356,7 +356,8 @@
     .st-block .fl::before { content: ''; position: absolute; right: -26%; bottom: -30%; width: 62%; aspect-ratio: 1; border-radius: 50%; background: color-mix(in oklab, var(--accent) 55%, #fff); }
     .st-block .fl::after { content: ''; position: absolute; left: -22%; bottom: -12%; width: 34%; aspect-ratio: 1; border-radius: 22%; rotate: 18deg; background: color-mix(in oklab, var(--accent) 60%, #000); }
     .st-block .word { position: absolute; left: -1.5vw; bottom: -5.2vw; font-size: clamp(120px, 23vw, 380px); line-height: 1; font-weight: 850; letter-spacing: -.055em;
-      white-space: nowrap; color: transparent; -webkit-text-stroke: 1.5px color-mix(in oklab, var(--ink) 11%, transparent); user-select: none; }
+      white-space: nowrap; color: transparent; -webkit-text-stroke: 1.5px color-mix(in oklab, var(--ink) 12%, transparent); user-select: none;
+      -webkit-mask-image: linear-gradient(0deg, #000 34%, transparent 62%); mask-image: linear-gradient(0deg, #000 34%, transparent 62%); }
     .hero.st-block-h .shots .phone { box-shadow: 0 0 0 1px rgba(255,255,255,.08) inset, 0 0 0 1px rgba(0,0,0,.55), 0 44px 60px -28px rgba(0,0,0,.75), 0 16px 26px -14px rgba(0,0,0,.5); }
     @media (max-width: 900px) {
       .st-block .fl { inset: auto 0 0 0 !important; width: auto !important; height: 330px; aspect-ratio: auto !important; translate: none !important; rotate: none !important;
