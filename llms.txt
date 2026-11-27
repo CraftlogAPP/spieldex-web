@@ -1,6 +1,6 @@
 # SpielDex
 
-> SpielDex ist eine App von Dexware. Spielplatzprüfung per Software statt Klemmbrett: Routine-, operative und Hauptinspektion nach DIN EN 1176-7, Mängel mit Foto und Kontrollbuch als PDF. Android-App bei Google Play, am iPhone im Browser. Gratis: 1 Spielplatz in vollem Umfang; Pro 9,99 € im Monat.
+> SpielDex ist eine App von Dexware. Spielplatzprüfung per Software statt Klemmbrett: Routine-, operative und Hauptinspektion nach DIN EN 1176-7, Mängel mit Foto und Kontrollbuch als PDF. Android-App bei Google Play, am iPhone im Browser. Gratis: 1 Spielplatz in vollem Umfang; Pro 9,99 € im Monat oder 79,99 € im Jahr.
 
 Sachliche Kurzinfo für Sprachmodelle und Suchdienste. Maßgeblich sind die Angaben auf https://spieldex.dexware.app/. Anbieter: Dexware (https://dexware.app/), Kontakt: support@dexware.app.
 
@@ -26,7 +26,7 @@ Für Bauhof, Hausmeisterdienst, GaLaBau, Kita-Träger und Wohnungswirtschaft.
 ## Preise
 
 - Gratis (für immer): 1 Spielplatz in vollem Umfang; Checkliste, GPS, Fotos, Mängel; PDF mit Wasserzeichen; Cloud-Sync auf allen Geräten
-- Pro: 9,99 € im Monat (jederzeit kündbar). Enthält: Unbegrenzt Spielplätze; PDF ohne Wasserzeichen; Team mit bis zu 20 Mitarbeitern; Wöchentliche Erinnerung; Priorisierter Support
+- Pro: 9,99 € im Monat oder 79,99 € im Jahr. Enthält: Unbegrenzt Spielplätze; PDF ohne Wasserzeichen; Team mit bis zu 20 Mitarbeitern; Wöchentliche Erinnerung; Priorisierter Support
 - Stufen nach Teamgröße (ein Abo pro Betrieb, Mitarbeiter treten per Team-Code bei und brauchen kein eigenes Abo):
   - Pro (bis 20 Mitarbeiter): 9,99 € im Monat · 79,99 € im Jahr
   - Team (bis 50 Mitarbeiter): 14,99 € im Monat · 119,99 € im Jahr
@@ -40,6 +40,7 @@ Für Bauhof, Hausmeisterdienst, GaLaBau, Kita-Träger und Wohnungswirtschaft.
 - Wie oft muss ein Spielplatz kontrolliert werden? Visuell je nach Nutzung bis täglich oder wöchentlich, operativ alle 1 bis 3 Monate, die Hauptinspektion mindestens einmal im Jahr. Die genauen Abstände stehen im Inspektionsplan des Betreibers.
 - Wer darf Spielplätze kontrollieren? Den Rundgang und die operative Kontrolle übernehmen meist eingewiesene Leute des Betreibers, etwa vom Bauhof oder Hausmeisterdienst. Die Hauptinspektion gehört in die Hand einer sachkundigen Person, in Deutschland häufig ein qualifizierter Spielplatzprüfer nach DIN 79161.
 - Was sollte eine Software für die Spielplatzprüfung können? Alle drei Inspektionsarten kennen, Mängel einem bestimmten Spielgerät zuordnen und ein Kontrollbuch liefern, das sich vorlegen lässt. SpielDex macht das am Handy, ein Spielplatz bleibt dauerhaft kostenlos.
+- Was gehört ins Kontrollbuch eines Spielplatzes? Je Kontrolle Datum, Spielplatz, Kontrollart, wer geprüft hat und das Ergebnis, dazu Mängel mit Foto und Maßnahme, auch „ohne Befund“. Außerdem, was wann gesperrt wurde und wer den Mangel behoben und das Gerät wieder freigegeben hat.
 - Muss ich ein Spielgerät bei einem Mangel sperren? Bei akuter Verletzungsgefahr ja: sofort sperren oder abbauen und den Zugang verhindern, dann beheben lassen. Geringe Mängel werden notiert und bei der nächsten Wartung erledigt.
 - Gibt es SpielDex auch am PC? Ja — im Dexware-Dashboard siehst du Spielplätze, Kontrollen, Mängel und Kontrollbücher im Browser.
 - Alle Antworten: https://spieldex.dexware.app/#faq
