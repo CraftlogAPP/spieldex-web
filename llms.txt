@@ -58,7 +58,7 @@ Für Bauhof, Hausmeisterdienst, GaLaBau, Kita-Träger und Wohnungswirtschaft.
 ## Ratgeber
 
 - [Spielplatz-Sichtkontrolle: Checkliste (DIN EN 1176-7)](https://spieldex.dexware.app/ratgeber-spielplatz-checkliste.html): Was gehört in die wöchentliche Spielplatz-Sichtkontrolle? 12 Prüfpunkte nach DIN EN 1176-7, Sofortmaßnahmen bei Gefahr und Einträge fürs Kontrollbuch.
-- [Spielplatzkontrolle nach DIN EN 1176: Pflicht und Fristen](https://spieldex.dexware.app/ratgeber-spielplatzkontrolle.html): Wie oft muss ein Spielplatz kontrolliert werden? Ratgeber zur Spielplatzkontrolle nach DIN EN 1176: visuelle Routine-, operative und jährliche Hauptinspektion, Verkehrssicherungspflicht (§ 823 BGB), typische Mängel und das Kontrollbuch.
+- [Spielplatzkontrolle nach DIN EN 1176: Fristen](https://spieldex.dexware.app/ratgeber-spielplatzkontrolle.html): Wie oft muss ein Spielplatz kontrolliert werden? Routine-, operative und jährliche Hauptinspektion nach DIN EN 1176, Haftung und Kontrollbuch.
 - [Spielplatzprüfung mit Software dokumentieren](https://spieldex.dexware.app/ratgeber-spielplatzpruefung-software.html): Spielplatzprüfung digital dokumentieren: was DIN EN 1176-7 an Plan und Nachweis erwartet, wer die Hauptinspektion macht und was Software können sollte.
 
 ## Rechtliches
